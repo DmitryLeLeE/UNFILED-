@@ -246,7 +246,7 @@
       no: "PLATE 01",
       title: "THE WITNESS",
       meta: "SILVER GELATIN / 1896",
-      img: "assets/img/eye.jpg",
+      img: "assets/img/eye.webp",
       alt: "A close profile portrait of a woman with a cap and a cigarette.",
       w: 820,
       h: 633,
@@ -259,7 +259,7 @@
       no: "PLATE 02",
       title: "THE CHOIR",
       meta: "FOUR EXPOSURES / 1896",
-      img: "assets/img/eye-grid.jpg",
+      img: "assets/img/eye-grid.webp",
       alt: "A mirrored four-part study of a woman's face.",
       w: 1000,
       h: 1000,
@@ -298,7 +298,7 @@
       no: "PLATE 05",
       title: "THE FIELD",
       meta: "COPPERPLATE / 1794",
-      img: "assets/img/map.jpg",
+      img: "assets/img/map.webp",
       alt: "A detail from an antique world map showing continents and ocean.",
       w: 1000,
       h: 1000,
@@ -311,7 +311,7 @@
       no: "PLATE 06",
       title: "ANATOMY OF A VOICE",
       meta: "ANATOMICAL ENGRAVING / 1831",
-      img: "assets/img/head.jpg",
+      img: "assets/img/head.webp",
       alt: "An anatomical engraving of a human head and neck in profile.",
       w: 760,
       h: 1252,
@@ -324,7 +324,7 @@
       no: "PLATE 07",
       title: "THE SWARM",
       meta: "CHROMOLITHOGRAPH / 1898",
-      img: "assets/img/butterfly.jpg",
+      img: "assets/img/butterfly.webp",
       alt: "A dense antique plate of butterflies and chrysalises.",
       w: 880,
       h: 1219,
@@ -2483,6 +2483,7 @@
       lostReelPlay.innerHTML = (finished ? "REWIND THE REEL" : "RUN THE LOST REEL") +
         ' <span aria-hidden="true">↯</span>';
     }
+    if (lostReelStatus) lostReelStatus.setAttribute("aria-live", "polite");
     if (finished) {
       reelFinished = true;
       if (lostReelStatus) lostReelStatus.textContent = "END OF REEL / 2 FRAMES MISSING";
@@ -2516,8 +2517,16 @@
       setReelFrame(0, true);
     }
 
+    filmFrames.forEach(function (frame) {
+      const image = frame.querySelector("img");
+      if (!image) return;
+      image.loading = "eager";
+      if (typeof image.decode === "function") image.decode().catch(function () {});
+    });
+
     reelPlaying = true;
     if (lostReel) lostReel.classList.add("is-playing");
+    if (lostReelStatus) lostReelStatus.setAttribute("aria-live", "off");
     if (lostReelPlay) {
       lostReelPlay.setAttribute("aria-pressed", "true");
       lostReelPlay.innerHTML = 'STOP THE REEL <span aria-hidden="true">×</span>';
@@ -2528,6 +2537,13 @@
 
   filmFrames.forEach(function (frame, index) {
     frame.addEventListener("click", function () {
+      if (reelPlaying) stopReel(false);
+      setReelFrame(index, true);
+    });
+
+    frame.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
       if (reelPlaying) stopReel(false);
       setReelFrame(index, true);
     });

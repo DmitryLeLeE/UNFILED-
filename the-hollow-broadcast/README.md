@@ -105,7 +105,7 @@ A local server is better than opening `index.html` directly, especially for the 
 | Signal map | `assets/svg/signal-map.svg` |
 | Errata plate | `assets/svg/plate-errata.svg` |
 | Blue-route print | `assets/svg/blue-route.svg` |
-| Ossuary skeleton | `assets/img/ossuary-skeleton.jpg` — Wellcome Collection, CC BY 4.0 |
+| Ossuary skeleton | `assets/img/ossuary-skeleton.webp` — Wellcome Collection, CC BY 4.0 |
 | Lost-reel frames | `assets/img/ossuary-*.jpg` + CSS film strip |
 | Random transmission messages | `script.js` — the `transmissionMessages` array |
 | Sigil words and instructions | `script.js` — the `sigilSubjects`, `sigilVerbs`, `sigilObjects`, and `sigilInstructions` arrays |

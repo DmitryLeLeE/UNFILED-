@@ -3515,7 +3515,7 @@ body {
   width: 300px;
   padding: 17px 18px 14px;
   border: 1px solid var(--black);
-  background: var(--white) url("assets/textures/paper-fiber.png");
+  background: var(--white) url("assets/textures/paper-fiber.webp");
   background-size: 330px 330px;
   color: var(--black);
   box-shadow: 9px 9px 0 var(--red);
@@ -3726,7 +3726,7 @@ body {
   isolation: isolate;
   padding: clamp(76px, 8vw, 150px) clamp(20px, 4.2vw, 66px) clamp(54px, 6vw, 96px);
   overflow: hidden;
-  background: #070707 url("assets/textures/xerox-black.png") center / 420px repeat;
+  background: #070707 url("assets/textures/xerox-black.webp") center / 420px repeat;
   color: var(--white);
 }
 
@@ -4626,7 +4626,7 @@ body {
   position: relative;
   padding: clamp(18px, 2vw, 28px);
   border: 1px solid var(--black);
-  background: #f3eee0 url("assets/textures/paper-fiber.png") center / 330px repeat;
+  background: #f3eee0 url("assets/textures/paper-fiber.webp") center / 330px repeat;
   box-shadow: 8px 8px 0 var(--red);
   color: var(--black);
   transform: rotate(0.8deg);
@@ -4818,9 +4818,9 @@ body {
   }
 
   .map-pin {
-    width: 24px;
-    height: 24px;
-    font-size: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 5.5px;
     box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.34);
   }
 
@@ -4902,7 +4902,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("assets/textures/xerox-black.png") center / 350px repeat;
+  background: url("assets/textures/xerox-black.webp") center / 350px repeat;
   opacity: 0.13;
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -5101,7 +5101,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("assets/textures/ink-black.png") center / 380px repeat;
+  background: url("assets/textures/ink-black.webp") center / 380px repeat;
   opacity: 0.16;
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -5678,6 +5678,18 @@ body {
   text-transform: uppercase;
 }
 
+.lost-reel__hint {
+  display: none;
+  margin: 0;
+  padding: 7px 12px;
+  background: #080808;
+  color: var(--red-bright);
+  font-family: var(--mono);
+  font-size: 4.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .film-strip {
   position: relative;
   display: flex;
@@ -5738,6 +5750,15 @@ body {
   font-family: var(--mono);
   font-size: 4.5px;
   letter-spacing: 0.02em;
+}
+
+.film-frame {
+  cursor: pointer;
+}
+
+.film-frame:focus-visible {
+  outline: 2px solid #e6ff00;
+  outline-offset: 3px;
 }
 
 .film-frame.is-active {
@@ -5953,6 +5974,10 @@ html.motion-lite { scroll-behavior: auto; }
 
   .lost-reel__bar {
     font-size: 4.5px;
+  }
+
+  .lost-reel__hint {
+    display: block;
   }
 
   .film-strip {

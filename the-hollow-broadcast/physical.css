@@ -95,13 +95,13 @@
 .cutting,
 .apparatus,
 .other-worlds {
-  background-image: url("assets/textures/paper-fiber.png");
+  background-image: url("assets/textures/paper-fiber.webp");
   background-size: 390px 390px;
   background-blend-mode: multiply;
 }
 
 .apparatus {
-  background-image: url("assets/textures/paper-fiber.png"), url("assets/textures/ink-smudge.png");
+  background-image: url("assets/textures/paper-fiber.webp"), url("assets/textures/ink-smudge.png");
   background-size: 390px 390px, 880px 620px;
   background-position: 0 0, 78% 20%;
   background-repeat: repeat, no-repeat;
@@ -109,7 +109,7 @@
 }
 
 .transmissions {
-  background-image: url("assets/textures/paper-fiber.png"), url("assets/textures/scan-streaks.png");
+  background-image: url("assets/textures/paper-fiber.webp"), url("assets/textures/scan-streaks.png");
   background-size: 420px 420px, 900px 620px;
   background-blend-mode: multiply, multiply;
 }
@@ -129,7 +129,7 @@
   z-index: 74;
   pointer-events: none;
   opacity: 0.14;
-  background-image: url("assets/textures/xerox-black.png");
+  background-image: url("assets/textures/xerox-black.webp");
   background-size: 300px 300px;
   mix-blend-mode: multiply;
 }
@@ -139,7 +139,7 @@
   position: absolute;
   inset: 0;
   opacity: 0.16;
-  background-image: url("assets/textures/xerox-white.png");
+  background-image: url("assets/textures/xerox-white.webp");
   background-size: 420px 420px;
   mix-blend-mode: screen;
 }
@@ -236,7 +236,7 @@
 
 /* Misregistered red scrawl on the otherwise clean index page. */
 .index-dialog__heading {
-  background-image: url("assets/textures/paper-fiber.png");
+  background-image: url("assets/textures/paper-fiber.webp");
   background-size: 430px 430px;
   background-blend-mode: multiply;
 }
@@ -315,7 +315,7 @@
   position: absolute;
   inset: 5px;
   z-index: 1;
-  background-image: url("assets/textures/halftone.png"), url("assets/textures/xerox-black.png");
+  background-image: url("assets/textures/halftone.png"), url("assets/textures/xerox-black.webp");
   background-size: 4px 4px, 220px 220px;
   mix-blend-mode: multiply;
   opacity: 0.26;
@@ -435,7 +435,7 @@
   position: absolute;
   inset: 4px;
   z-index: 3;
-  background-image: url("assets/textures/xerox-black.png");
+  background-image: url("assets/textures/xerox-black.webp");
   background-size: 190px 190px;
   mix-blend-mode: multiply;
   opacity: 0.2;
@@ -488,7 +488,7 @@
 }
 
 .transmission-log {
-  background-image: url("assets/textures/paper-fiber.png");
+  background-image: url("assets/textures/paper-fiber.webp");
   background-size: 360px 360px;
   background-blend-mode: multiply;
 }
@@ -568,7 +568,7 @@
 
 .index-dialog,
 .plate-dialog {
-  background-image: url("assets/textures/paper-fiber.png");
+  background-image: url("assets/textures/paper-fiber.webp");
   background-size: 430px 430px;
   background-blend-mode: multiply;
 }
@@ -718,7 +718,7 @@
 }
 
 .map-room__frame {
-  background-image: url("assets/textures/paper-fiber.png");
+  background-image: url("assets/textures/paper-fiber.webp");
   background-size: 260px 260px;
 }
 
