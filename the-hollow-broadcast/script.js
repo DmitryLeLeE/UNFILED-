@@ -317,10 +317,49 @@
         "A catalogue of transformations that never completed. The chrysalis is the only honest room in the house.",
       source:
         "The Butterfly Book, Plate IV, 1898. Public domain, Wikimedia Commons."
+    },
+    hand: {
+      no: "PLATE 08",
+      title: "THE HAND",
+      meta: "INK STUDY / MMXXVI",
+      img: "assets/svg/plate-hand.svg",
+      alt: "A rough black ink hand with an eye in the palm and red annotation circles.",
+      w: 600,
+      h: 760,
+      text:
+        "A hand drawn from memory after the original was removed from the file. The eye in the palm is not part of the anatomy. It was added later, by someone who wanted to be watched.",
+      source:
+        "Original ink illustration made for this publication. No external source."
+    },
+    wheel: {
+      no: "PLATE 09",
+      title: "THE WHEEL",
+      meta: "INK & RED / MMXXVI",
+      img: "assets/svg/plate-wheel.svg",
+      alt: "A black poster with a rough white wheel, moth-like forms and red radial marks.",
+      w: 600,
+      h: 760,
+      text:
+        "A wheel for turning a question until it becomes a different question. The moth is the only moving part. Do not oil it.",
+      source:
+        "Original ink and red illustration made for this publication. No external source."
+    },
+    spiral: {
+      no: "PLATE 10",
+      title: "THE SPIRAL",
+      meta: "INK STUDY / MMXXVI",
+      img: "assets/svg/plate-spiral.svg",
+      alt: "A rough black ink spiral with red marks and a short inscription.",
+      w: 600,
+      h: 760,
+      text:
+        "A spiral is a line that refuses to leave. Follow it inward and the archive becomes a room. Follow it outward and the room becomes an archive.",
+      source:
+        "Original ink illustration made for this publication. No external source."
     }
   };
 
-  const plateOrder = ["witness", "choir", "moth", "flower", "map", "head", "swarm"];
+  const plateOrder = ["witness", "choir", "moth", "flower", "map", "head", "swarm", "hand", "wheel", "spiral"];
   let currentPlateIndex = 0;
   let lastPlateTrigger = null;
 
@@ -1597,6 +1636,64 @@
 
   if (receiveButton) {
     receiveButton.addEventListener("click", receiveTransmission);
+  }
+
+  /* ------------------------------------------------------------------------
+     Text cut-up
+     ------------------------------------------------------------------------ */
+
+  const cutupBtn = $("#cutupBtn");
+  const cutupOut = $("#cutupOut");
+  const cutupCount = $("#cutupCount");
+
+  const cutupOpeners = [
+    "I stopped trusting the sky",
+    "The room was empty",
+    "Every archive is",
+    "We mistook the hum for",
+    "The microphone kept",
+    "The line was open"
+  ];
+  const cutupMiddles = [
+    "a haunted house",
+    "a second shadow",
+    "a borrowed voice",
+    "a room beneath a room",
+    "a door left open",
+    "a clean signal"
+  ];
+  const cutupEndings = [
+    "and nobody answered.",
+    "so we kept listening.",
+    "but the tape kept running.",
+    "and the room kept breathing.",
+    "until the signal went out.",
+    "and the order was not the point."
+  ];
+
+  let cutupMoves = 0;
+
+  function makeCutup() {
+    if (!cutupOut || !cutupBtn) return;
+
+    const opener = cutupOpeners[randomInt(0, cutupOpeners.length - 1)];
+    const middle = cutupMiddles[randomInt(0, cutupMiddles.length - 1)];
+    const ending = cutupEndings[randomInt(0, cutupEndings.length - 1)];
+
+    cutupMoves += 1;
+    cutupOut.textContent = opener + " " + middle + " " + ending;
+
+    if (cutupCount) cutupCount.textContent = "CUT " + pad(cutupMoves, 3);
+
+    if (cutupMoves === 3) {
+      cutupOut.textContent += " The blade is warm.";
+    } else if (cutupMoves === 7) {
+      cutupOut.textContent += " Stop cutting. It is already a sentence.";
+    }
+  }
+
+  if (cutupBtn) {
+    cutupBtn.addEventListener("click", makeCutup);
   }
 
   /* ------------------------------------------------------------------------

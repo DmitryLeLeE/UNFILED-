@@ -52,7 +52,7 @@ A title, a sitter, four exposures, a moth, a botanical error, and a signal that
 will not identify itself. The entrance is the cover and the first wrong turn.
 
 ### 01 / SPECIMENS
-Seven public-domain plates recovered from a damaged external drive. Bodies,
+Seven public-domain plates and three original ink plates recovered from a damaged external drive. Bodies,
 botanical errors and instruments of observation, reproduced badly on purpose.
 Click a plate to open its file.
 
@@ -91,7 +91,8 @@ Plates, type, machine notes and the end of the transmission.
 There is no correct order, but there is an index.
 
 - Open the **INDEX** tab at the right edge, or press `I`.
-- Click any specimen to open its file.
+- Click any specimen to open its file. The reader now holds ten plates, including THE HAND, THE WHEEL, and THE SPIRAL.
+- In Fragments, press **CUT THE TEXT** to assemble a new line from a local fragment pool.
 - Drag the scraps on **The Cutting Table**; use `SHUFFLE THE TABLE`, `TURN 15°` and `RESET`.
   With a scrap focused, arrow keys nudge it, `[` and `]` rotate it, and `Shift` makes nudges larger.
 - Press **DRAW A MARK** in Apparatus to generate a new sigil, then **SAVE SVG** if you want to keep it.
@@ -143,6 +144,22 @@ Individual frames:
 [07 Other Worlds](previews/07-other-worlds.jpg) ·
 [08 Colophon](previews/08-colophon.jpg) ·
 [Mobile](previews/mobile.jpg)
+
+### ORIGINAL PLATES / PL. 08—10
+
+![Three original ink plates — The Hand, The Wheel, The Spiral](previews/extra-original-plates.jpg)
+
+Three ink drawings made for this publication, not sourced from an archive:
+**THE HAND**, **THE WHEEL**, and **THE SPIRAL**. All three now open in the
+specimen reader. The catalogue has grown from seven plates to ten.
+
+### FIELD TOOL / TEXT CUT-UP
+
+![The Text Cut-Up tool inside Fragments](previews/extra-text-cutup.jpg)
+
+A new instrument in **Fragments**. Every press of **CUT THE TEXT** reassembles a
+sentence from local fragments. After the third cut it starts talking back. The
+tool is local only: no saving, no sending, no account.
 
 ### SOCIAL CARD / 1200 × 630
 

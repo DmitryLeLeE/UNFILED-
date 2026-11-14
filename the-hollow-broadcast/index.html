@@ -168,7 +168,7 @@
           <span aria-hidden="true">SPECI</span>
           <span class="specimens__title-second" aria-hidden="true">MENS</span>
         </h2>
-        <p class="specimens__catalogue" aria-hidden="true">PLATES 01—07<br>PARTIAL CATALOGUE<br>DO NOT RE-FILE</p>
+        <p class="specimens__catalogue" aria-hidden="true">PLATES 01—10<br>PARTIAL CATALOGUE<br>DO NOT RE-FILE</p>
         <p class="specimens__intro">A collection of bodies, botanical errors, and instruments of observation. Reproduced badly on purpose. Hover to disturb. Click to open the file.</p>
       </div>
 
@@ -257,7 +257,44 @@
           </span>
         </button>
 
-        <p class="plate-field__aside" aria-hidden="true">FILES RECOVERED<br>FROM A DAMAGED<br>EXTERNAL DRIVE.<br>NO ORIGINALS.</p>
+
+        <button class="plate plate--hand reveal" type="button" data-plate="hand" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/svg/plate-hand.svg" alt="" width="600" height="760" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 08</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE HAND</span>
+            <span class="plate__meta">INK STUDY / MMXXVI</span>
+          </span>
+        </button>
+
+        <button class="plate plate--wheel reveal" type="button" data-plate="wheel" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/svg/plate-wheel.svg" alt="" width="600" height="760" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 09</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE WHEEL</span>
+            <span class="plate__meta">INK &amp; RED / MMXXVI</span>
+          </span>
+        </button>
+
+        <button class="plate plate--spiral reveal" type="button" data-plate="spiral" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/svg/plate-spiral.svg" alt="" width="600" height="760" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 10</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE SPIRAL</span>
+            <span class="plate__meta">INK STUDY / MMXXVI</span>
+          </span>
+        </button>
+
+        <p class="plate-field__aside" aria-hidden="true">FILES RECOVERED<br>FROM A DAMAGED<br>EXTERNAL DRIVE.<br>THREE FROM MEMORY.</p>
         <p class="plate-field__note" aria-hidden="true">THE PLATES ARE NOT<br>IN ORDER. THE ORDER<br>IS NOT THE POINT.</p>
         <svg class="plate-field__scribble" viewBox="0 0 700 260" aria-hidden="true">
           <path d="M8 195c61-43 104-34 122 20 16 51 55-123 100-114 36 8 31 103 70 106 47 4 55-109 106-107 42 2 42 97 89 94 47-3 51-78 99-75 38 2 55 47 98 42"/>
@@ -451,6 +488,17 @@
           <path d="M28 50c40 52 47 99 23 147M621 31c-48 49-54 106-33 170"/>
         </svg>
       </div>
+
+      <aside class="cutup reveal" aria-labelledby="cutupTitle">
+        <span class="cutup__kicker" aria-hidden="true">FIELD TOOL / F—05</span>
+        <h3 class="cutup__title" id="cutupTitle">TEXT CUT-UP</h3>
+        <p class="cutup__out" id="cutupOut" aria-live="polite">PRESS THE BLADE. THE SENTENCE WILL ARRIVE WRONG.</p>
+        <div class="cutup__row">
+          <button class="cutup__button" id="cutupBtn" type="button">CUT THE TEXT <span aria-hidden="true">↯</span></button>
+          <span class="cutup__count" id="cutupCount" aria-hidden="true">CUT 000</span>
+        </div>
+        <p class="cutup__note">Assembled locally from fragments. Nothing is sent. Nothing is saved.</p>
+      </aside>
     </section>
 
     <section class="sheet apparatus" id="apparatus" aria-labelledby="apparatusTitle">

@@ -3478,3 +3478,210 @@ body {
     transform: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Original plates and the text cut-up
+   -------------------------------------------------------------------------- */
+
+.plate--hand {
+  top: 14%;
+  left: 64%;
+  width: 13%;
+  z-index: 6;
+  --rotation: 4deg;
+}
+
+.plate--wheel {
+  top: 56%;
+  left: 35%;
+  width: 12%;
+  z-index: 6;
+  --rotation: -7deg;
+}
+
+.plate--spiral {
+  top: 71%;
+  left: 18%;
+  width: 15%;
+  z-index: 6;
+  --rotation: 3deg;
+}
+
+.cutup {
+  position: absolute;
+  right: 3.8vw;
+  bottom: 7vw;
+  z-index: 16;
+  width: 300px;
+  padding: 17px 18px 14px;
+  border: 1px solid var(--black);
+  background: var(--white) url("assets/textures/paper-fiber.png");
+  background-size: 330px 330px;
+  color: var(--black);
+  box-shadow: 9px 9px 0 var(--red);
+  transform: rotate(1.1deg);
+}
+
+.cutup__kicker {
+  display: block;
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cutup__title {
+  margin: 7px 0 8px;
+  font-family: var(--heavy);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.cutup__out {
+  min-height: 5.6em;
+  margin: 0;
+  color: var(--black);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.16;
+}
+
+.cutup__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.cutup__button {
+  flex: 1;
+  padding: 9px 10px;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cutup__button span {
+  float: right;
+  color: var(--red-bright);
+  font-size: 11px;
+}
+
+.cutup__button:hover,
+.cutup__button:focus-visible {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.cutup__count {
+  flex: 0 0 auto;
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 6px;
+  letter-spacing: 0.04em;
+}
+
+.cutup__note {
+  margin: 11px 0 0;
+  padding-top: 7px;
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 5px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .plate--hand {
+    top: 17%;
+    left: 66%;
+    width: 22%;
+  }
+
+  .plate--wheel {
+    top: 49%;
+    left: 34%;
+    width: 21%;
+  }
+
+  .plate--spiral {
+    top: 73%;
+    left: 4%;
+    width: 24%;
+  }
+
+  .cutup {
+    right: 3vw;
+    bottom: 6vw;
+    width: 275px;
+  }
+}
+
+@media (max-width: 760px) {
+  .plate--hand {
+    top: 17%;
+    left: 57%;
+    width: 38%;
+  }
+
+  .plate--wheel {
+    top: 32%;
+    left: 0;
+    width: 38%;
+  }
+
+  .plate--spiral {
+    top: 51%;
+    left: 45%;
+    width: 38%;
+  }
+
+  .cutup {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 88%;
+    margin: 29px 0 0 5%;
+    padding: 14px 14px 12px;
+    box-shadow: 6px 6px 0 var(--red);
+    transform: rotate(-0.8deg);
+  }
+
+  .cutup__title {
+    font-size: 19px;
+  }
+
+  .cutup__out {
+    min-height: 4.8em;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cutup {
+    width: 78%;
+    margin-left: 5%;
+    padding: 13px 12px 11px;
+  }
+
+  .cutup__title {
+    font-size: 18px;
+  }
+
+  .cutup__out {
+    font-size: 15px;
+  }
+}

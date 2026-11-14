@@ -298,6 +298,17 @@
   mask-image: url("assets/paper/torn-mask-03.svg");
 }
 
+.plate--hand .plate__figure,
+.plate--spiral .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+}
+
+.plate--wheel .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-04.svg");
+  mask-image: url("assets/paper/torn-mask-04.svg");
+}
+
 /* Heavy toner and a second, uneven ink pass on the specimen scans. */
 .plate__figure::before {
   content: "";
