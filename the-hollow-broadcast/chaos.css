@@ -3972,8 +3972,20 @@ body {
 
 .relic:hover .relic__figure img,
 .relic:focus-visible .relic__figure img {
-  filter: contrast(1.2);
+  filter: grayscale(1) contrast(1.22);
   transform: scale(1.025);
+}
+
+.relic--redroom .relic__figure img,
+.relic--balloon .relic__figure img {
+  filter: contrast(1.12) saturate(1.16);
+}
+
+.relic--redroom:hover .relic__figure img,
+.relic--redroom:focus-visible .relic__figure img,
+.relic--balloon:hover .relic__figure img,
+.relic--balloon:focus-visible .relic__figure img {
+  filter: contrast(1.16) saturate(1.22);
 }
 
 .relic__figure::after {
@@ -4098,7 +4110,7 @@ body {
   width: 100%;
   max-height: 62vh;
   object-fit: contain;
-  filter: grayscale(1) contrast(1.08);
+  filter: contrast(1.05);
 }
 
 .relic-dialog__body {

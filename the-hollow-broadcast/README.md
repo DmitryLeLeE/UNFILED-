@@ -24,7 +24,7 @@ Built as a static site for GitHub Pages. No build step. No framework. No backend
 - **Fragments** — black-page notes, red corrections, and an anatomical eye diagram pressed into the background.
 - **Apparatus** — an interactive sigil engine. Generate marks, read the designation, save the result as an SVG.
 - **Frequencies** — four synthesized drone channels built with Web Audio. No mp3 files, no streaming service, no end of track.
-- **Cultural Residue** — Appendix A: nine relic plates composed from public-domain/CC0 archive fragments, alluding to shared pop-culture objects from the 1980s–2010s without using their original imagery. Click a relic to open its file card.
+- **Cultural Residue** — Appendix A: nine relic plates composed from public-domain, CC0 and one CC BY 2.0 archive fragment, alluding to shared pop-culture objects from the 1980s–2010s without using their original imagery. Click a relic to open its file card.
 - **The Map Room** — Appendix B: an original signal map with six interactive field notes, a red route, one incorrect north, and a blue ink-test route that is not in the legend.
 - **Last Things** — Appendix C: a 1543 Vesalius skeleton (Wellcome Collection, CC BY 4.0), an ossuary index, and a 35mm lost-reel player with six frames and two missing frames.
 - **Room Tone** — a low, synthesized background hum controlled by the fixed `ROOM TONE [S]` toggle. It starts on click, never autoplays, and can be stopped at any time.
@@ -149,7 +149,7 @@ See [SOURCES.md](SOURCES.md) for the exact source pages, creators, and licences.
 
 Fonts are distributed under the SIL Open Font License; the licence files are in `assets/fonts/licenses/`.
 
-The nine relic plates recompose public-domain and CC0 source photographs from the plates section. The signal map, errata plate and blue-route print are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
+The nine relic plates recompose public-domain, CC0 and one CC BY 2.0 (red balloon) source photographs from Wikimedia Commons and museum collections. The signal map, errata plate and blue-route print are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
 
 The Vesalius skeleton in Appendix C is from Wellcome Collection (CC BY 4.0) and is credited in the section, colophon and SOURCES.md.
 

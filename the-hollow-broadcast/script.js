@@ -1676,8 +1676,8 @@
       no: "REL. 01 / THE UNLABELED CAPSULE",
       title: "THE UNLABELED CAPSULE",
       ref: "RESIDUE OF: THE MATRIX (1999)",
-      img: "assets/img/eye-diagram.webp",
-      alt: "A cropped optical diagram of an eye, used as residue.",
+      img: "assets/img/relic-capsule.webp",
+      alt: "An amber capsule held between two fingers, photographed as residue.",
       text:
         "A red object with no instructions. The choice was never between two objects; it was between two versions of the room. We kept the capsule. The room stayed."
     },
@@ -1685,8 +1685,8 @@
       no: "REL. 02 / THE CAKE (A LIE)",
       title: "THE CAKE (A LIE)",
       ref: "RESIDUE OF: PORTAL (2007)",
-      img: "assets/img/flower.webp",
-      alt: "A cropped botanical plate with pale leaves, used as residue.",
+      img: "assets/img/relic-cake.webp",
+      alt: "A slice of layered chocolate cake on a plate with chocolate sauce.",
       text:
         "The cake was promised. The cake was not delivered. The recipe survived, but every ingredient has been replaced by a recorded voice."
     },
@@ -1694,8 +1694,8 @@
       no: "REL. 03 / THE MONOLITH (CHIPPED)",
       title: "THE MONOLITH (CHIPPED)",
       ref: "RESIDUE OF: 2001: A SPACE ODYSSEY (1968)",
-      img: "assets/img/map.webp",
-      alt: "A cropped copperplate map of the world, used as residue.",
+      img: "assets/img/relic-monolith.webp",
+      alt: "An engraved obelisk at Axum, standing on its base.",
       text:
         "It was already there when the room arrived. We built the wall around it and called the wall history."
     },
@@ -1703,8 +1703,8 @@
       no: "REL. 04 / THE RED BALLOON",
       title: "THE RED BALLOON",
       ref: "RESIDUE OF: IT (1986 / 2017)",
-      img: "assets/img/moth.jpg",
-      alt: "A cropped antique moth engraving, used as residue.",
+      img: "assets/img/relic-balloon.webp",
+      alt: "A red balloon painted on a pale brick wall, its string curling downward.",
       text:
         "It came up through the storm drain. The drain was not connected to anything. The balloon was."
     },
@@ -1712,8 +1712,8 @@
       no: "REL. 05 / THE WHITE RABBIT",
       title: "THE WHITE RABBIT",
       ref: "RESIDUE OF: ALICE IN WONDERLAND (1865)",
-      img: "assets/img/head.webp",
-      alt: "A cropped anatomical head and neck engraving, used as residue.",
+      img: "assets/img/relic-rabbit.webp",
+      alt: "John Tenniel’s White Rabbit in a checked coat, holding a watch.",
       text:
         "The rabbit is late. The watch is wrong. The hole is exactly where you are standing."
     },
@@ -1721,8 +1721,8 @@
       no: "REL. 06 / THE DEAD CHANNEL",
       title: "THE DEAD CHANNEL",
       ref: "RESIDUE OF: NEUROMANCER (1984)",
-      img: "assets/img/eye-grid.webp",
-      alt: "A cropped four-part portrait study, used as residue.",
+      img: "assets/img/relic-channel.webp",
+      alt: "A CRT test card dissolving into static, labeled NO SIGNAL.",
       text:
         "The sky was the colour of a dead channel. We kept watching. Somewhere behind the static, a weather report was still being written."
     },
@@ -1730,8 +1730,8 @@
       no: "REL. 07 / THE RED ROOM",
       title: "THE RED ROOM",
       ref: "RESIDUE OF: TWIN PEAKS (1990)",
-      img: "assets/img/portrait.webp",
-      alt: "A cropped black-and-white portrait, used as residue.",
+      img: "assets/img/relic-redroom.webp",
+      alt: "Anna Ancher’s red interior, a girl seated by a sunlit window.",
       text:
         "A red room with a chevron floor. The curtain opens on the same conversation from a different year. Nobody remembers arriving. Everybody remembers the coffee."
     },
@@ -1739,8 +1739,8 @@
       no: "REL. 08 / THE VHS TAPE",
       title: "THE VHS TAPE",
       ref: "RESIDUE OF: RINGU (1998)",
-      img: "assets/img/butterfly.webp",
-      alt: "A cropped antique butterfly plate, used as residue.",
+      img: "assets/img/relic-vhs.webp",
+      alt: "A black VHS cassette, its reels visible through the window.",
       text:
         "A tape with no label. Seven days is a generous estimate. The static has been paused for thirty years and it is still moving."
     },
@@ -1748,8 +1748,8 @@
       no: "REL. 09 / THE BLACK MIRROR",
       title: "THE BLACK MIRROR",
       ref: "RESIDUE OF: BLACK MIRROR (2011)",
-      img: "assets/img/eye.webp",
-      alt: "A cropped profile portrait with a cigarette, used as residue.",
+      img: "assets/img/relic-mirror.webp",
+      alt: "A dark obsidian mirror with a polished, reflective face.",
       text:
         "A black screen that knows your face. The reflection is delayed by one decision. By the time you recognize yourself, the next episode has already been renewed."
     }

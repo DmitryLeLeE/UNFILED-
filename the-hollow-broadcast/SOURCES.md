@@ -48,6 +48,20 @@ The publication uses public-domain and CC0 visual material from Wikimedia Common
 - Licence: public domain
 - Used for: `assets/img/eye-diagram.webp`.
 
+## Cultural Residue image credits / Appendix A
+
+All nine plates are cropped, toned, selective-colour processed and mounted on paper for this publication.
+
+- **The Unlabeled Capsule** — *Omega deep sea three fish oil capsule pill photographed in West Bengal, India, August 5, 2024* by Billjones94. CC0. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Omega_deep_sea_three_fish_oil_capsule_pill_photographed_in_West_Bengal,_India,_August_5,_2024.jpg>).
+- **The Cake (A Lie)** — *Piece of chocolate cake on a white plate decorated with chocolate sauce* by Daria Yakovleva. CC0. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg>).
+- **The Monolith (Chipped)** — *Obelisk at Axum* by James Heath, Yale Center for British Art. CC0. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:James_Heath_-_Obelisk_at_Axum_-_B1977.14.8641_-_Yale_Center_for_British_Art.jpg>).
+- **The Red Balloon** — *Red balloon (9577041792)* by Newtown grafitti. CC BY 2.0. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Red_balloon_(9577041792).jpg>). Selective red treatment by this project.
+- **The White Rabbit** — *Alice-white-rabbit* by Sir John Tenniel, from *Alice’s Adventures in Wonderland* (1865). Public domain. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Alice-white-rabbit.jpg>).
+- **The Dead Channel** — original generated CRT test card and static. No external source.
+- **The Red Room** — *Den røde stue. Interiør med kunstnerens datter Helga* by Anna Ancher, 1904. Public domain. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Anna_Ancher_-_Den_r%C3%B8de_stue._Interi%C3%B8r_med_kunstnerens_datter_Helga_-_1904.jpg>).
+- **The VHS Tape** — *VHS cassette* by fluorinated. CC0. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:VHS_cassette.png>).
+- **The Black Mirror** — *Obsidian Mirror* (1980.34.43), The Metropolitan Museum of Art. CC0. [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Obsidian_Mirror_MET_1980.34.43.jpg>).
+
 ## Skeleton plate / Appendix C
 
 - **A. Vesalius, _De humani corporis fabrica_, 1543: skeleton.** Wellcome Collection, London. CC BY 4.0. Source: [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:A._Vesalius,_De_humani_corporis_fabrica,_1543;_skeleton_Wellcome_L0028557.jpg>). Cropped, converted to high-contrast monochrome and recomposed for the ossuary and lost-reel frames.
