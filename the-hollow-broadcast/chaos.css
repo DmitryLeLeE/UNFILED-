@@ -6101,3 +6101,39 @@ html.motion-lite { scroll-behavior: auto; }
     font-size: 6px;
   }
 }
+
+/* Registration marks make each residue plate read as a filed, annotated print. */
+.relic__registration {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
+.relic__registration::before {
+  content: "";
+  position: absolute;
+  left: var(--mx);
+  top: var(--my);
+  width: var(--mr);
+  height: var(--mr);
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relic__registration::after {
+  content: "";
+  position: absolute;
+  left: var(--mx);
+  top: var(--my);
+  width: calc(var(--mr) * 1.7);
+  height: calc(var(--mr) * 1.7);
+  transform: translate(-50%, -50%);
+  background:
+    linear-gradient(var(--red), var(--red)) center / 1px 100% no-repeat,
+    linear-gradient(var(--red), var(--red)) center / 100% 1px no-repeat;
+  opacity: 0.78;
+}
