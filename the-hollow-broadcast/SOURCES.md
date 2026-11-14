@@ -48,6 +48,11 @@ The publication uses public-domain and CC0 visual material from Wikimedia Common
 - Licence: public domain
 - Used for: `assets/img/eye-diagram.webp`.
 
+## Skeleton plate / Appendix C
+
+- **A. Vesalius, _De humani corporis fabrica_, 1543: skeleton.** Wellcome Collection, London. CC BY 4.0. Source: [Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:A._Vesalius,_De_humani_corporis_fabrica,_1543;_skeleton_Wellcome_L0028557.jpg>). Cropped, converted to high-contrast monochrome and recomposed for the ossuary and lost-reel frames.
+- The lost reel is an original interface and fiction, not a recovered film.
+
 ## Original material
 
 The following are original to this project and are not derived from the sources above:

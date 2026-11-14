@@ -26,6 +26,7 @@ Built as a static site for GitHub Pages. No build step. No framework. No backend
 - **Frequencies** — four synthesized drone channels built with Web Audio. No mp3 files, no streaming service, no end of track.
 - **Cultural Residue** — Appendix A: nine original relic drawings that allude to shared pop-culture objects from the 1980s–2010s without using their original imagery. Click a relic to open its file card.
 - **The Map Room** — Appendix B: an original signal map with six interactive field notes, a red route, one incorrect north, and a blue ink-test route that is not in the legend.
+- **Last Things** — Appendix C: a 1543 Vesalius skeleton (Wellcome Collection, CC BY 4.0), an ossuary index, and a 35mm lost-reel player with six frames and two missing frames.
 - **Room Tone** — a low, synthesized background hum controlled by the fixed `ROOM TONE [S]` toggle. It starts on click, never autoplays, and can be stopped at any time.
 - **Transmissions** — a local random message receiver with a scrambled type-in effect and a three-entry log.
 - **Other Worlds** — six real external archives and libraries, presented without an algorithm.
@@ -102,6 +103,10 @@ A local server is better than opening `index.html` directly, especially for the 
 | Relic illustrations | `assets/svg/relic-*.svg` |
 | Map locations and field notes | `script.js` — the `mapNodes` object |
 | Signal map | `assets/svg/signal-map.svg` |
+| Errata plate | `assets/svg/plate-errata.svg` |
+| Blue-route print | `assets/svg/blue-route.svg` |
+| Ossuary skeleton | `assets/img/ossuary-skeleton.jpg` — Wellcome Collection, CC BY 4.0 |
+| Lost-reel frames | `assets/img/ossuary-*.jpg` + CSS film strip |
 | Random transmission messages | `script.js` — the `transmissionMessages` array |
 | Sigil words and instructions | `script.js` — the `sigilSubjects`, `sigilVerbs`, `sigilObjects`, and `sigilInstructions` arrays |
 | Images | `assets/img/` |
@@ -131,6 +136,7 @@ All are self-hosted in WOFF2 format with broad fallbacks in the CSS. If external
 - Open **INDEX** and switch **SOUND FX** on/off (or press `F`). Paper, static, stamp, ping and draw sounds are synthesized locally; nothing autoplays and no audio files are loaded.
 - Open **CULTURAL RESIDUE** (Appendix A) and click any relic to open its reader; use previous/next inside the dialog.
 - In **THE MAP ROOM** (Appendix B), select a numbered marker to read its field note, press **TRACE THE ROUTE** to cycle through all six coordinates, or press **TRACE THE BLUE ROUTE** to overlay the unauthorised ink-test path.
+- In **LAST THINGS** (Appendix C), press **RUN THE LOST REEL** to advance the frames; click any frame to inspect it. Heavy flicker and bone motion are disabled automatically in `motion-lite` (small screens, reduced motion, low-core/memory devices, Save-Data).
 - In **Transmissions**, press **RECEIVE TRANSMISSION** to generate a new message.
 - Three touches on the moth produce a small, unnecessary event.
 - The audio volume is remembered in `localStorage`. Nothing else is stored, and nothing is sent anywhere.
@@ -143,7 +149,9 @@ See [SOURCES.md](SOURCES.md) for the exact source pages, creators, and licences.
 
 Fonts are distributed under the SIL Open Font License; the licence files are in `assets/fonts/licenses/`.
 
-The nine relic drawings and the signal map are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
+The nine relic drawings, the signal map, the errata plate and the blue-route print are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
+
+The Vesalius skeleton in Appendix C is from Wellcome Collection (CC BY 4.0) and is credited in the section, colophon and SOURCES.md.
 
 The original writing, layout, code, and generated sigils are released without restriction: **NO RIGHTS RESERVED / NO RIGHTS OBSERVED.**
 

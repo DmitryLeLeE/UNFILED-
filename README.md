@@ -90,6 +90,10 @@ drawings are original. The stories are still missing their endings.
 Six coordinates, one invented coastline, and an interactive field map. Select a
 marker to open its note; trace the route if you trust the red line.
 
+### C / LAST THINGS
+An ossuary of borrowed bones and a lost 35mm reel with missing frames. Built
+around a 1543 Vesalius skeleton and an original film-strip player.
+
 ### 08 / COLOPHON
 Plates, type, machine notes and the end of the transmission.
 
@@ -111,6 +115,7 @@ There is no correct order, but there is an index.
 - Open **CULTURAL RESIDUE** from the index or scroll to the appendix. Click a relic to open its file; use previous/next inside.
 - In **THE MAP ROOM**, select any numbered marker to read a field note, press **TRACE THE ROUTE** to move through all six coordinates, or press **TRACE THE BLUE ROUTE** for the unauthorised ink-test route.
 - In **Specimens**, the yellow **ERRATA** insert opens PLATE 11, printed in the wrong ink.
+- In **LAST THINGS**, run the lost reel; click any frame to inspect it. Two frames are missing and stay missing.
 - Press **RECEIVE TRANSMISSION** in Transmissions. Do not reply.
 - Touch the moth three times. It is not a button.
 
@@ -205,6 +210,15 @@ blue and red, deliberately outside the palette.
 An unauthorised test print at the bottom of the map room: electric blue,
 hand-drawn, and not in the legend.
 
+### APPENDIX C / LAST THINGS
+
+![Last Things — the ossuary and the lost reel](previews/15-last-things.jpg)
+
+The skeleton is a 1543 Vesalius plate from Wellcome Collection, used under
+CC BY 4.0. The reel is original: six frames, two missing, no soundtrack.
+
+![The lost reel player](previews/16-lost-reel.jpg)
+
 ### SOCIAL CARD / 1200 × 630
 
 ![The Hollow Broadcast — social card](previews/social-card.jpg)
@@ -222,6 +236,10 @@ No analytics. No cookies. No master.
 The only thing stored locally is the audio volume. The room tone, the four
 carriers and the interface sounds are synthesized live in the browser; there are
 no audio files, no streaming service and no autoplay. Nothing is sent anywhere.
+
+Heavy film flicker and skeletal breathing run only on desktop-class devices.
+Reduced-motion users, small screens, low-core/low-memory devices and Save-Data
+connections automatically receive the quieter `motion-lite` layer.
 
 The source starts at [`the-hollow-broadcast/index.html`](the-hollow-broadcast/index.html).
 The publication is deployed by the GitHub Pages workflow in
@@ -255,6 +273,10 @@ The nine relic drawings, the signal map, the errata plate and the blue-route
 print are original. Their cultural references are textual allusions only; no
 copyrighted characters, logos, footage or original artwork were used. The
 referenced works remain the property of their makers.
+
+The Vesalius skeleton in Appendix C is from Wellcome Collection and is used
+under CC BY 4.0; the credit is printed in the section, the colophon and
+SOURCES.md. The lost reel is an original interface, not a recovered film.
 
 The writing, layout and code are released without restriction:
 

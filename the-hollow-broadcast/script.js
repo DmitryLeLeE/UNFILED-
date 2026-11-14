@@ -5,6 +5,16 @@
   const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
   const body = document.body;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionLite =
+    reducedMotion ||
+    window.matchMedia("(max-width: 760px)").matches ||
+    (typeof navigator.hardwareConcurrency === "number" && navigator.hardwareConcurrency <= 4) ||
+    (typeof navigator.deviceMemory === "number" && navigator.deviceMemory <= 4) ||
+    Boolean(navigator.connection && navigator.connection.saveData);
+
+  if (motionLite) {
+    document.documentElement.classList.add("motion-lite");
+  }
 
   /* ------------------------------------------------------------------------
      Utilities
@@ -2316,6 +2326,27 @@
       filter.connect(envelope.gain);
       source.start(envelope.start);
       source.stop(envelope.end);
+    } else if (kind === "projector") {
+      const source = ctx.createBufferSource();
+      source.buffer = getSfxNoise(ctx);
+      const filter = ctx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.value = 620;
+      const envelope = sfxGain(ctx, 0.03, 1.15);
+      source.connect(filter);
+      filter.connect(envelope.gain);
+      source.start(envelope.start);
+      source.stop(envelope.end);
+
+      const motor = ctx.createOscillator();
+      motor.type = "sawtooth";
+      motor.frequency.value = 74;
+      const motorGain = ctx.createGain();
+      motorGain.gain.value = 0.008;
+      motor.connect(motorGain);
+      motorGain.connect(envelope.gain);
+      motor.start(envelope.start);
+      motor.stop(envelope.end);
     } else if (kind === "ping") {
       const envelope = sfxGain(ctx, 0.035, 0.2);
       [880, 1320].forEach(function (frequency, index) {
@@ -2391,6 +2422,122 @@
     }
     updateSfxUI();
   }
+
+  /* ------------------------------------------------------------------------
+     Appendix C / the lost reel
+     ------------------------------------------------------------------------ */
+
+  const lostReel = $(".lost-reel");
+  const filmStrip = $("#filmStrip");
+  const filmFrames = $$(".film-frame");
+  const lostReelPlay = $("#lostReelPlay");
+  const lostReelStatus = $("#lostReelStatus");
+  let reelIndex = 0;
+  let reelTimer = null;
+  let reelPlaying = false;
+  let reelFinished = false;
+
+  function readFrame(frame) {
+    const caption = frame ? frame.querySelector("figcaption") : null;
+    const labels = caption ? Array.from(caption.querySelectorAll("span")) : [];
+    return {
+      frame: labels[0] ? labels[0].textContent : "FRAME --",
+      time: labels[1] ? labels[1].textContent : "--:--:--:--",
+      missing: Boolean(frame && frame.classList.contains("film-frame--missing"))
+    };
+  }
+
+  function setReelFrame(index, scrollIntoView) {
+    if (!filmFrames.length) return;
+    const safe = Math.max(0, Math.min(index, filmFrames.length - 1));
+    reelIndex = safe;
+
+    filmFrames.forEach(function (frame, frameIndex) {
+      frame.classList.toggle("is-active", frameIndex === safe);
+      frame.classList.toggle("is-past", frameIndex < safe);
+    });
+
+    const data = readFrame(filmFrames[safe]);
+    if (lostReelStatus) {
+      lostReelStatus.textContent =
+        data.frame + " / " + data.time + (data.missing ? " / MISSING" : "");
+    }
+
+    if (scrollIntoView && filmStrip) {
+      const frame = filmFrames[safe];
+      const left = frame.offsetLeft - (filmStrip.clientWidth - frame.clientWidth) / 2;
+      filmStrip.scrollTo({
+        left: Math.max(0, left),
+        behavior: motionLite || reducedMotion ? "auto" : "smooth"
+      });
+    }
+  }
+
+  function stopReel(finished) {
+    reelPlaying = false;
+    window.clearTimeout(reelTimer);
+    reelTimer = null;
+    if (lostReel) lostReel.classList.remove("is-playing");
+    if (lostReelPlay) {
+      lostReelPlay.setAttribute("aria-pressed", "false");
+      lostReelPlay.innerHTML = (finished ? "REWIND THE REEL" : "RUN THE LOST REEL") +
+        ' <span aria-hidden="true">↯</span>';
+    }
+    if (finished) {
+      reelFinished = true;
+      if (lostReelStatus) lostReelStatus.textContent = "END OF REEL / 2 FRAMES MISSING";
+    }
+  }
+
+  function advanceReel() {
+    if (!reelPlaying) return;
+    reelTimer = window.setTimeout(function () {
+      if (!reelPlaying) return;
+      const next = reelIndex + 1;
+      if (next >= filmFrames.length) {
+        stopReel(true);
+        return;
+      }
+      setReelFrame(next, true);
+      advanceReel();
+    }, motionLite ? 1120 : 860);
+  }
+
+  function startReel() {
+    if (!filmFrames.length) return;
+
+    if (reelPlaying) {
+      stopReel(false);
+      return;
+    }
+
+    if (reelFinished) {
+      reelFinished = false;
+      setReelFrame(0, true);
+    }
+
+    reelPlaying = true;
+    if (lostReel) lostReel.classList.add("is-playing");
+    if (lostReelPlay) {
+      lostReelPlay.setAttribute("aria-pressed", "true");
+      lostReelPlay.innerHTML = 'STOP THE REEL <span aria-hidden="true">×</span>';
+    }
+    playSfx("projector");
+    advanceReel();
+  }
+
+  filmFrames.forEach(function (frame, index) {
+    frame.addEventListener("click", function () {
+      if (reelPlaying) stopReel(false);
+      setReelFrame(index, true);
+    });
+  });
+
+  if (lostReelPlay) {
+    lostReelPlay.addEventListener("click", startReel);
+  }
+
+  setReelFrame(0, false);
 
   /* ------------------------------------------------------------------------
      Initial state
