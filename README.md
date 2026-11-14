@@ -82,9 +82,13 @@ Six real doorways out of this building. They are not affiliated with the
 broadcast. The internet is still a place you can get lost in.
 
 ### A / CULTURAL RESIDUE
-An appendix of six objects borrowed from the world's shared memory, stripped of
+An appendix of nine objects borrowed from the world's shared memory, stripped of
 their original images and filed under residue. The references are textual; the
 drawings are original. The stories are still missing their endings.
+
+### B / THE MAP ROOM
+Six coordinates, one invented coastline, and an interactive field map. Select a
+marker to open its note; trace the route if you trust the red line.
 
 ### 08 / COLOPHON
 Plates, type, machine notes and the end of the transmission.
@@ -102,8 +106,9 @@ There is no correct order, but there is an index.
   With a scrap focused, arrow keys nudge it, `[` and `]` rotate it, and `Shift` makes nudges larger.
 - Press **DRAW A MARK** in Apparatus to generate a new sigil, then **SAVE SVG** if you want to keep it.
 - Select a frequency and press play. Sound is generated live in the browser.
-- Press **ROOM TONE [S]** at the lower left for a low, synthesized room hum. It starts only on click and can be stopped at any time.
+- Press **ROOM TONE [S]** at the right edge, below the index tab, for a low, synthesized room hum. It starts only on click and can be stopped at any time.
 - Open **CULTURAL RESIDUE** from the index or scroll to the appendix. Click a relic to open its file; use previous/next inside.
+- In **THE MAP ROOM**, select any numbered marker to read a field note, or press **TRACE THE ROUTE** to move through all six coordinates.
 - Press **RECEIVE TRANSMISSION** in Transmissions. Do not reply.
 - Touch the moth three times. It is not a button.
 
@@ -172,10 +177,19 @@ tool is local only: no saving, no sending, no account.
 
 ![Appendix A — Cultural Residue](previews/09-cultural-residue.jpg)
 
-Six relics, six references, one filing error. The appendix is part of the
+Nine relics, nine references, one filing error. The appendix is part of the
 publication, not a bonus page.
 
 ![The relic reader](previews/10-relic-reader.jpg)
+
+### APPENDIX B / THE MAP ROOM
+
+![Appendix B — The Map Room](previews/11-map-room.jpg)
+
+An interactive field map with six coordinates, an invented coastline, and a
+route that does not agree with the scale.
+
+![A map room field note](previews/12-map-panel.jpg)
 
 ### SOCIAL CARD / 1200 × 630
 
@@ -223,9 +237,10 @@ The paper, xerox, ink, tape, torn-edge and hand-drawn assets are original to thi
 project. Fonts are distributed under the SIL Open Font License; licence files are
 in `the-hollow-broadcast/assets/fonts/licenses/`.
 
-The six relic drawings are original. Their cultural references are textual
-allusions only; no copyrighted characters, logos, footage or original artwork
-were used. The referenced works remain the property of their makers.
+The nine relic drawings and the signal map are original. Their cultural
+references are textual allusions only; no copyrighted characters, logos,
+footage or original artwork were used. The referenced works remain the property
+of their makers.
 
 The writing, layout and code are released without restriction:
 

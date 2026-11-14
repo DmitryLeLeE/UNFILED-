@@ -1700,10 +1700,37 @@
       alt: "A black television screen full of static and an eye, with a red channel marker.",
       text:
         "The sky was the colour of a dead channel. We kept watching. Somewhere behind the static, a weather report was still being written."
+    },
+    redroom: {
+      no: "REL. 07 / THE RED ROOM",
+      title: "THE RED ROOM",
+      ref: "RESIDUE OF: TWIN PEAKS (1990)",
+      img: "assets/svg/relic-redroom.svg",
+      alt: "A red curtain, a black-and-white chevron floor and a small chair, drawn as a rough ink diagram.",
+      text:
+        "A red room with a chevron floor. The curtain opens on the same conversation from a different year. Nobody remembers arriving. Everybody remembers the coffee."
+    },
+    vhs: {
+      no: "REL. 08 / THE VHS TAPE",
+      title: "THE VHS TAPE",
+      ref: "RESIDUE OF: RINGU (1998)",
+      img: "assets/svg/relic-vhs.svg",
+      alt: "A black VHS cassette with white reels and a red stripe, drawn as a rough ink diagram.",
+      text:
+        "A tape with no label. Seven days is a generous estimate. The static has been paused for thirty years and it is still moving."
+    },
+    mirror: {
+      no: "REL. 09 / THE BLACK MIRROR",
+      title: "THE BLACK MIRROR",
+      ref: "RESIDUE OF: BLACK MIRROR (2011)",
+      img: "assets/svg/relic-mirror.svg",
+      alt: "A black phone-like slab with a dark reflection and a red eye, drawn as a rough ink diagram.",
+      text:
+        "A black screen that knows your face. The reflection is delayed by one decision. By the time you recognize yourself, the next episode has already been renewed."
     }
   };
 
-  const relicOrder = ["capsule", "cake", "monolith", "balloon", "rabbit", "channel"];
+  const relicOrder = ["capsule", "cake", "monolith", "balloon", "rabbit", "channel", "redroom", "vhs", "mirror"];
   let currentRelicIndex = 0;
   let lastRelicTrigger = null;
 
@@ -1790,6 +1817,97 @@
       if (event.target === relicDialog) closeRelic();
     });
   }
+
+  /* ------------------------------------------------------------------------
+     Appendix B / map room
+     ------------------------------------------------------------------------ */
+
+  const mapNodes = {
+    north: {
+      no: "APPENDIX B / FIELD NOTE 01",
+      title: "NORTH STATION",
+      meta: "58°17′N / 03°04′W / 61.7 HZ",
+      text:
+        "The station is closed. The transmitter is not. Someone left the heater on and the door open, which is how we know the signal is still inside."
+    },
+    cut: {
+      no: "APPENDIX B / FIELD NOTE 02",
+      title: "THE CUT",
+      meta: "57°51′N / 02°12′W / 49.3 HZ",
+      text:
+        "A channel cut through the chart to make the crossing shorter. The crossing is shorter. The map is now wrong in a way that feels intentional."
+    },
+    witness: {
+      no: "APPENDIX B / FIELD NOTE 03",
+      title: "WITNESS ROCK",
+      meta: "56°44′N / 04°08′W / 33.0 HZ",
+      text:
+        "A rock with a clear view of the water and no view of the shore. Whoever named it was not describing the rock. They were describing the job."
+    },
+    lowtide: {
+      no: "APPENDIX B / FIELD NOTE 04",
+      title: "LOW TIDE",
+      meta: "55°19′N / 05°21′W / 22.4 HZ",
+      text:
+        "At low tide you can walk to the next island. At high tide the island is a rumour. The route on this map was drawn at the wrong hour on purpose."
+    },
+    dead: {
+      no: "APPENDIX B / FIELD NOTE 05",
+      title: "DEAD CHANNEL",
+      meta: "54°02′N / 01°44′W / 87.6 HZ",
+      text:
+        "The water here receives nothing and gives nothing back. The echo is clean. That is how the channel got its name and how it kept it."
+    },
+    hollow: {
+      no: "APPENDIX B / FIELD NOTE 06",
+      title: "THE HOLLOW",
+      meta: "53°33′N / 06°17′W / 00.0 HZ",
+      text:
+        "The centre of the map is not a place. It is the part of the route that was left out. Follow the red line until it stops being a line."
+    }
+  };
+
+  const mapOrder = ["north", "cut", "witness", "lowtide", "dead", "hollow"];
+  let currentMapIndex = 0;
+
+  const mapPanelNo = $("#mapPanelNo");
+  const mapPanelTitle = $("#mapPanelTitle");
+  const mapPanelMeta = $("#mapPanelMeta");
+  const mapPanelText = $("#mapPanelText");
+  const mapPins = $$("[data-map]");
+  const mapTrace = $("#mapTrace");
+
+  function renderMap(index) {
+    const data = mapNodes[mapOrder[index]];
+    if (!data) return;
+
+    currentMapIndex = index;
+
+    if (mapPanelNo) mapPanelNo.textContent = data.no;
+    if (mapPanelTitle) mapPanelTitle.textContent = data.title;
+    if (mapPanelMeta) mapPanelMeta.textContent = data.meta;
+    if (mapPanelText) mapPanelText.textContent = data.text;
+
+    mapPins.forEach(function (button) {
+      const active = button.getAttribute("data-map") === mapOrder[index];
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  mapPins.forEach(function (button) {
+    button.addEventListener("click", function () {
+      renderMap(mapOrder.indexOf(button.getAttribute("data-map")));
+    });
+  });
+
+  if (mapTrace) {
+    mapTrace.addEventListener("click", function () {
+      renderMap((currentMapIndex + 1) % mapOrder.length);
+    });
+  }
+
+  renderMap(0);
 
   /* ------------------------------------------------------------------------
      Text cut-up

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="#f5f0e4"/>
+<g fill="none" stroke="#080808" stroke-width="1" opacity=".7">
+<path d="M22 340h356M22 350h356M22 360h356M22 370h356M22 380h356"/>
+</g>
+<g>
+<path d="M61 103h278v175H61Z" fill="#080808" stroke="#080808" stroke-width="4"/>
+<path d="M79 121h242v93H79Z" fill="#f5f0e4"/>
+<circle cx="131" cy="167" r="21" fill="#080808"/><circle cx="257" cy="167" r="21" fill="#080808"/>
+<circle cx="131" cy="167" r="7" fill="#f5f0e4"/><circle cx="257" cy="167" r="7" fill="#f5f0e4"/>
+<path d="M88 234h224M103 245h42M207 245h58" stroke="#f5f0e4" stroke-width="3"/>
+<path d="M304 103v175" stroke="#b00000" stroke-width="3"/>
+<path d="M66 95 338 95" stroke="#f5f0e4" stroke-width="2"/>
+</g>
+<g fill="none" stroke="#b00000" stroke-width="2">
+<circle cx="312" cy="327" r="34"/><path d="M312 293v68M278 327h68"/>
+<path d="M58 70c22-12 46-13 72-3M67 286c20 10 39 13 58 9" stroke-width="1.4"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="1.1">
+<path d="M51 60c37 8 69 7 96-4M286 295c21 6 42 5 62-4"/>
+<path d="M320 70l21-21M320 49l21 21" stroke-width="1"/>
+</g>
+<text x="25" y="34" fill="#080808" font-family="monospace" font-size="8" letter-spacing="3">REL. 08 / THE VHS TAPE</text>
+<text x="25" y="48" fill="#b00000" font-family="monospace" font-size="6" letter-spacing="2">SEVEN DAYS IS GENEROUS</text>
+</svg>

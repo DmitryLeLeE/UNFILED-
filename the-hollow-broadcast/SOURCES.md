@@ -59,13 +59,14 @@ The following are original to this project and are not derived from the sources 
 - The physical material layer: torn-paper section and image masks, torn edges, tape, paper scraps, xerox/toner/paper textures, halftone, ink dropout, scratches, and hand-drawn red/black marks in `assets/paper/`, `assets/textures/`, `assets/illustrations/`, and `assets/overlays/`.
 - `assets/svg/contour.svg`, `assets/svg/ribbons.svg`, and `assets/grain.png`.
 - The three original ink plates: `assets/svg/plate-hand.svg`, `assets/svg/plate-wheel.svg`, and `assets/svg/plate-spiral.svg`.
-- The six original relic drawings: `assets/svg/relic-capsule.svg`, `relic-cake.svg`, `relic-monolith.svg`, `relic-balloon.svg`, `relic-rabbit.svg`, and `relic-channel.svg`.
+- The nine original relic drawings: `assets/svg/relic-capsule.svg`, `relic-cake.svg`, `relic-monolith.svg`, `relic-balloon.svg`, `relic-rabbit.svg`, `relic-channel.svg`, `relic-redroom.svg`, `relic-vhs.svg`, and `relic-mirror.svg`.
+- The original signal map: `assets/svg/signal-map.svg`, and the six fictional field notes in `script.js`.
 - The Text Cut-Up tool in Fragments.
 - The audio synthesis, the receiver interaction, and the synthesized room tone.
 
 ## Cultural references
 
-Appendix A contains six textual allusions to widely circulated works:
+Appendix A contains nine textual allusions to widely circulated works:
 
 - *The Matrix* (1999) — the unlabeled capsule.
 - *Portal* (2007) — the cake that was promised.
@@ -73,8 +74,11 @@ Appendix A contains six textual allusions to widely circulated works:
 - *It* (1986 / 2017) — the red balloon.
 - *Alice's Adventures in Wonderland* (1865) — the white rabbit.
 - *Neuromancer* (1984) — the dead channel.
+- *Twin Peaks* (1990) — the red room.
+- *Ringu* (1998) — the VHS tape.
+- *Black Mirror* (2011) — the black mirror.
 
-The allusions are textual only. No characters, logos, footage, or original artwork from those works are reproduced. The six relic drawings are original to this project. The works themselves remain the property of their makers.
+The allusions are textual only. No characters, logos, footage, or original artwork from those works are reproduced. The nine relic drawings and the signal map are original to this project. The works themselves remain the property of their makers.
 
 ## Fonts
 

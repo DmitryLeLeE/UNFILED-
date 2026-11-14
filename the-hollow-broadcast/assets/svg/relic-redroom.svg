@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="#f5f0e4"/>
+<g fill="none" stroke="#080808" stroke-linecap="round">
+<path d="M24 65c63 11 122 9 178-6M280 340c32-9 56-24 72-46" stroke-width="1.2"/>
+<path d="M55 92c-15 46-14 94 3 142M345 92c15 46 14 94-3 142" stroke-width="1.5"/>
+<path d="M55 92c18 21 34 39 58 52M345 92c-18 21-34 39-58 52" stroke-width="3"/>
+<path d="M113 144c19 15 39 23 61 23s42-8 61-23" stroke-width="1.4"/>
+</g>
+<g>
+<path d="M0 300h400v100H0Z" fill="#080808"/>
+<path d="M0 300h400v13H0Z" fill="#b00000"/>
+<path d="M0 320h400v9H0Z" fill="#f5f0e4" opacity=".88"/>
+<path d="M0 343h400v9H0Z" fill="#f5f0e4" opacity=".88"/>
+<path d="M0 366h400v9H0Z" fill="#f5f0e4" opacity=".88"/>
+<path d="M0 389h400v11H0Z" fill="#f5f0e4" opacity=".88"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="2">
+<path d="M199 262v38M174 270h50M181 282h36"/>
+</g>
+<g fill="none" stroke="#b00000" stroke-width="2">
+<circle cx="306" cy="210" r="33"/><path d="M306 177v66M273 210h66"/>
+<path d="M75 250c19-15 42-21 68-17M94 139c12-11 28-16 45-16" stroke-width="1.5"/>
+</g>
+<text x="25" y="34" fill="#080808" font-family="monospace" font-size="8" letter-spacing="3">REL. 07 / THE RED ROOM</text>
+<text x="25" y="48" fill="#b00000" font-family="monospace" font-size="6" letter-spacing="2">THE CURTAIN IS STILL OPEN</text>
+</svg>

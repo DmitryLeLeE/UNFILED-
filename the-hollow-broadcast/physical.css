@@ -680,7 +680,8 @@
 }
 
 .relic--capsule .relic__figure,
-.relic--balloon .relic__figure {
+.relic--balloon .relic__figure,
+.relic--redroom .relic__figure {
   -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
   mask-image: url("assets/paper/torn-mask-01.svg");
   -webkit-mask-size: 100% 100%;
@@ -688,7 +689,8 @@
 }
 
 .relic--cake .relic__figure,
-.relic--rabbit .relic__figure {
+.relic--rabbit .relic__figure,
+.relic--vhs .relic__figure {
   -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
   mask-image: url("assets/paper/torn-mask-02.svg");
   -webkit-mask-size: 100% 100%;
@@ -696,9 +698,30 @@
 }
 
 .relic--monolith .relic__figure,
-.relic--channel .relic__figure {
+.relic--channel .relic__figure,
+.relic--mirror .relic__figure {
   -webkit-mask-image: url("assets/paper/torn-mask-03.svg");
   mask-image: url("assets/paper/torn-mask-03.svg");
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Appendix B / the map room
+   -------------------------------------------------------------------------- */
+
+.map-room {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-04.svg");
+  mask-image: url("assets/paper/torn-section-flat-04.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.map-room__frame {
+  background-image: url("assets/textures/paper-fiber.png");
+  background-size: 260px 260px;
+}
+
+.map-room__frame img {
+  filter: contrast(1.02) brightness(1.01);
 }

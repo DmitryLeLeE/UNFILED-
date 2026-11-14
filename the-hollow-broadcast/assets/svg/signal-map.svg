@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#f3eee0"/>
+<g fill="none" stroke="#080808" opacity=".28">
+<path d="M0 100h1600M0 200h1600M0 300h1600M0 400h1600M0 500h1600M0 600h1600M0 700h1600M0 800h1600M0 900h1600"/>
+<path d="M100 0v1000M200 0v1000M300 0v1000M400 0v1000M500 0v1000M600 0v1000M700 0v1000M800 0v1000M900 0v1000M1000 0v1000M1100 0v1000M1200 0v1000M1300 0v1000M1400 0v1000M1500 0v1000"/>
+</g>
+<rect x="28" y="28" width="1544" height="944" fill="none" stroke="#080808" stroke-width="2"/>
+<rect x="42" y="42" width="1516" height="916" fill="none" stroke="#080808" stroke-width="1" stroke-dasharray="2 7"/>
+<g fill="#e9e1cf" stroke="#080808" stroke-width="2.2" stroke-linejoin="round">
+<path d="M80 214c80-54 160-74 244-58 61 12 93 45 151 41 47-3 73-28 127-22 67 7 107 47 170 44 63-4 110-42 172-42 84 0 150 42 221 39 89-4 152-40 252-26l34 640c-91 17-174-2-247 23-67 23-102 54-180 49-82-6-128-53-207-48-79 5-141 47-223 43-92-4-155-59-243-48-91 11-156 52-259 36Z"/>
+<path d="M270 151c44-25 96-25 130 8 23 22 24 51 10 80-19 39-63 57-106 44-48-14-77-63-62-108 4-13 13-19 28-24Z" fill="#f3eee0" stroke-width="1.4"/>
+<path d="M1010 635c76-28 145 8 158 70 12 59-42 116-102 117-67 1-116-57-101-118 6-26 21-49 45-69Z" fill="#f3eee0" stroke-width="1.4"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="1" opacity=".5">
+<path d="M230 160c-28 16-45 42-49 73M214 132c-34 20-52 51-53 86M186 310c-31-3-57-17-76-43M333 333c16-31 22-61 18-92M980 650c-34 5-57 22-70 49M1120 650c30-1 55 12 72 38M948 830c20-30 24-61 12-90M1238 777c-18-26-27-53-27-81"/>
+</g>
+<g fill="none" stroke="#b00000" stroke-width="1.8" opacity=".8">
+<path d="M290 390c44-22 83-20 118 6M390 187c41-15 81-13 119 6M900 187c43-10 87-3 132 20M1120 740c39-22 79-23 120-3M600 745c36 17 72 18 110 4" stroke-width="1.1"/>
+<circle cx="705" cy="498" r="104" stroke-width="1"/><circle cx="705" cy="498" r="90" stroke-width="1" stroke-dasharray="3 8"/>
+<path d="M705 358v280M565 498h280" stroke-width=".8"/>
+</g>
+<g fill="#b00000" opacity=".58">
+<circle cx="1268" cy="177" r="2.4"/><circle cx="1301" cy="198" r="1.6"/><circle cx="1234" cy="205" r="1.2"/><circle cx="1385" cy="766" r="2"/><circle cx="1408" cy="745" r="1.1"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="2">
+<path d="M150 846h264M150 856h196M1194 856h248M1194 866h180"/>
+<path d="M1262 110l33 57h-66Z" fill="#080808"/><path d="M1262 167v44M1262 167l-18 34M1262 167l18 34" stroke-width="1.4"/>
+<circle cx="1262" cy="159" r="31" stroke-width="1.4"/><path d="M1262 128v62M1231 159h62" stroke-width="1"/>
+<path d="M106 738v104M106 738h44M106 788h32M106 842h44" stroke-width="2"/>
+<path d="M93 738h26M93 842h26" stroke-width="4"/>
+</g>
+<g fill="#080808" font-family="monospace" letter-spacing="4">
+<text x="78" y="78" font-size="24">SIGNAL MAP / SHEET B — THE MAP ROOM</text>
+<text x="80" y="102" font-size="12" fill="#b00000">LATITUDE 51°30′N — LONGITUDE 0°07′W — NOT TO SCALE — DO NOT NAVIGATE BY THIS</text>
+<text x="76" y="930" font-size="13">THE HOLLOW BROADCAST / FIELD CARTOGRAPHY / ISSUE 00</text>
+<text x="1450" y="930" font-size="13" fill="#b00000">NO FIXED NORTH</text>
+</g>
+<g fill="#080808" font-family="monospace" letter-spacing="3">
+<text x="180" y="242" font-size="18">NORTH STATION</text>
+<text x="183" y="260" font-size="10">58°17′N / 03°04′W</text>
+<text x="820" y="278" font-size="18">THE CUT</text>
+<text x="823" y="296" font-size="10">57°51′N / 02°12′W</text>
+<text x="560" y="455" font-size="18">WITNESS ROCK</text>
+<text x="563" y="473" font-size="10">56°44′N / 04°08′W</text>
+<text x="130" y="685" font-size="18">LOW TIDE</text>
+<text x="133" y="703" font-size="10">55°19′N / 05°21′W</text>
+<text x="1040" y="655" font-size="18">DEAD CHANNEL</text>
+<text x="1043" y="673" font-size="10">54°02′N / 01°44′W</text>
+<text x="455" y="800" font-size="18">THE HOLLOW</text>
+<text x="458" y="818" font-size="10">53°33′N / 06°17′W</text>
+</g>
+<g fill="none" stroke="#b00000" stroke-linecap="round">
+<path d="M127 840c52-129 82-208 152-323 48-79 100-117 163-153 63-36 132-55 196-43 70 13 118 50 169 105 50 54 92 131 155 199 38 41 69 88 96 147" stroke-width="2.2" stroke-dasharray="8 8"/>
+<path d="M148 930c26-40 58-71 96-93M1372 206c33 22 60 53 82 92" stroke-width="1.4"/>
+<path d="M1000 908 140 690" stroke-width="1.1" stroke-dasharray="2 7"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="1.2">
+<path d="M90 890c80-24 161-31 242-21M1170 874c73-20 145-26 219-19" stroke-width="1"/>
+<path d="M1116 80h90M1116 90h55M92 112h60M92 122h38"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="2">
+<circle cx="300" cy="274" r="12"/><circle cx="300" cy="274" r="4" fill="#b00000"/>
+<circle cx="930" cy="244" r="12"/><circle cx="930" cy="244" r="4" fill="#b00000"/>
+<circle cx="695" cy="520" r="12"/><circle cx="695" cy="520" r="4" fill="#b00000"/>
+<circle cx="268" cy="690" r="12"/><circle cx="268" cy="690" r="4" fill="#b00000"/>
+<circle cx="1248" cy="706" r="12"/><circle cx="1248" cy="706" r="4" fill="#b00000"/>
+<circle cx="655" cy="815" r="12"/><circle cx="655" cy="815" r="4" fill="#b00000"/>
+</g>
+<g fill="none" stroke="#080808" stroke-width="1" opacity=".6">
+<path d="M1330 330c52-22 98-22 139 2M1320 360c40-13 78-12 115 3M1320 390c30-5 57-2 82 9"/>
+</g>
+</svg>
