@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hollow Broadcast — A Field Guide to Unreceived Messages</title>
+  <meta name="description" content="An experimental transmission in eight parts. Plates, an interactive cutting table, fragments, a sigil engine, frequencies, and other worlds. No cookies. No algorithm. No master.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Hollow Broadcast">
+  <meta property="og:description" content="A field guide to messages that arrive after their senders have gone.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/sixcaps-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivoblack-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chaos.css">
+  <link rel="stylesheet" href="physical.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the transmission</a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="xerox-screen" aria-hidden="true"></div>
+  <div class="fold" aria-hidden="true"></div>
+  <div class="edge-mark edge-mark--left" aria-hidden="true">THE HOLLOW BROADCAST / ISSUE 00 / MMXXVI</div>
+  <div class="edge-mark edge-mark--right" aria-hidden="true">A FIELD GUIDE TO UNRECEIVED MESSAGES</div>
+
+  <button class="index-tab" type="button" data-open-index aria-haspopup="dialog" aria-controls="indexDialog" title="Open the index (I)">
+    <span class="index-tab__dot" aria-hidden="true"></span>
+    <span>INDEX</span>
+    <span class="index-tab__plus" aria-hidden="true">+</span>
+  </button>
+
+  <div class="audio-flag" id="audioFlag" hidden>
+    <span class="rec-dot" aria-hidden="true"></span>
+    <span class="audio-flag__text">FREQ <strong id="audioFlagFreq">61.7</strong> HZ</span>
+    <button class="audio-flag__stop" id="audioFlagStop" type="button">STOP</button>
+  </div>
+
+  <header class="masthead">
+    <span class="masthead__code">THB / 00</span>
+    <span class="masthead__mid">AN INDEPENDENT TRANSMISSION</span>
+    <span class="masthead__right"><span class="rec-dot rec-dot--blink" aria-hidden="true"></span> <span id="statusText">RECEIVING</span></span>
+  </header>
+
+  <main id="main">
+    <section class="entrance" id="entrance" aria-labelledby="entranceTitle">
+      <div class="entrance__stage">
+        <div class="entrance__contour" aria-hidden="true">
+          <img src="assets/svg/contour.svg" alt="" width="1400" height="1400">
+        </div>
+
+        <p class="entrance__vertical entrance__vertical--left" aria-hidden="true">A FIELD GUIDE TO UNRECEIVED MESSAGES / ISSUE 00</p>
+        <p class="entrance__vertical entrance__vertical--right" aria-hidden="true">SIGNAL 61.7 HZ / NO REPLY / DO NOT ADJUST</p>
+
+        <span class="entrance__coordinates" aria-hidden="true">51°30′N 0°07′W / 03:33:00</span>
+
+        <h1 class="entrance__title" id="entranceTitle">
+          <span class="entrance__the">THE</span>
+          <span class="entrance__hollow">HOLLOW</span>
+          <span class="entrance__band"><span>BROADCAST</span></span>
+        </h1>
+
+        <figure class="entrance__portrait">
+          <img src="assets/img/portrait.jpg" alt="A woman in profile holding a cigarette, photographed in 1896" width="1200" height="1100">
+          <figcaption class="entrance__portrait-caption">
+            <span>FIG. 01 — THE SITTER</span>
+            <span>GELATIN SILVER / 1896 / EYES DOWN</span>
+          </figcaption>
+          <span class="entrance__target" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <g fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="100" cy="100" r="71"/>
+                <circle cx="100" cy="100" r="24"/>
+                <path d="M100 8v184M12 100h176"/>
+                <path d="M100 40 144 157H56Z" stroke-dasharray="3 8"/>
+              </g>
+            </svg>
+          </span>
+        </figure>
+
+        <button class="moth-trigger" type="button" aria-label="A moth. Do not touch." data-moth>
+          <img src="assets/img/moth.jpg" alt="" width="780" height="680">
+          <span class="moth-trigger__label" aria-hidden="true">SPECIMEN 03 / ATTENDANT</span>
+        </button>
+
+        <figure class="entrance__eye" aria-label="Four mirrored photographic studies of a woman's face">
+          <img src="assets/img/eye-grid.jpg" alt="" width="1000" height="1000">
+          <figcaption aria-hidden="true">FIG. 02 — THE CHOIR / FOUR EXPOSURES / DO NOT LOOK FOR LONG</figcaption>
+        </figure>
+
+        <figure class="entrance__flower" aria-hidden="true">
+          <img src="assets/img/flower.webp" alt="" width="650" height="902">
+          <figcaption>PLATE 04 / BOTANICAL ERROR</figcaption>
+        </figure>
+
+        <div class="entrance__intro">
+          <p class="entrance__kicker">A FIELD GUIDE TO MESSAGES THAT ARRIVE<br>AFTER THEIR SENDERS HAVE GONE.</p>
+          <p class="entrance__copy">Bodies, botanical errors, and instruments of observation. Reproduced badly on purpose. The archive is open, but the line is not clear.</p>
+        </div>
+
+        <div class="entrance__action">
+          <a class="action-link" href="#specimens">
+            <span class="action-link__label">ENTER THE ARCHIVE</span>
+            <span class="action-link__arrow" aria-hidden="true">↘</span>
+          </a>
+          <button class="text-button" type="button" data-open-index>OPEN INDEX <span aria-hidden="true">[ I ]</span></button>
+        </div>
+
+        <p class="entrance__note entrance__note--a" aria-hidden="true">NO. 00 / NOT FOR DISTRIBUTION</p>
+        <p class="entrance__note entrance__note--b" aria-hidden="true">THE SIGNAL IS NOT FOR YOU.<br>KEEP LISTENING.</p>
+
+        <svg class="entrance__scribble" viewBox="0 0 900 260" aria-hidden="true">
+          <path d="M9 206C75 72 104 97 133 182c28 84 66-138 119-124 38 10 28 132 77 128 45-4 55-115 101-116 50-1 52 114 100 114 37 0 52-66 92-57 38 9 43 58 88 55 35-2 53-23 81-50"/>
+          <path d="M768 38c-23 8-49 33-62 65M758 38c-1 14 0 28 7 43"/>
+        </svg>
+
+        <svg class="entrance__mark" viewBox="0 0 120 120" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="60" cy="60" r="47"/>
+            <circle cx="60" cy="60" r="30" stroke-dasharray="2 5"/>
+            <path d="M60 4v112M4 60h112"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="entrance__foot">
+        <span>SCROLL TO RECEIVE</span>
+        <span class="entrance__foot-line" aria-hidden="true"></span>
+        <span>ISSUE 00 / MMXXVI</span>
+      </div>
+    </section>
+
+    <div class="running-band" aria-hidden="true">
+      <div class="running-band__track">
+        <span>NO RECEPTION</span><span class="running-band__star">✳</span>
+        <span>THE LINE IS OPEN</span><span class="running-band__star">✳</span>
+        <span>DO NOT ADJUST YOUR SET</span><span class="running-band__star">✳</span>
+        <span>NO RECEPTION</span><span class="running-band__star">✳</span>
+        <span>THE LINE IS OPEN</span><span class="running-band__star">✳</span>
+        <span>DO NOT ADJUST YOUR SET</span><span class="running-band__star">✳</span>
+      </div>
+    </div>
+
+    <section class="sheet specimens" id="specimens" aria-labelledby="specimensTitle">
+      <div class="specimens__masthead reveal">
+        <span class="specimens__index" aria-hidden="true">01</span>
+        <h2 class="specimens__title" id="specimensTitle" aria-label="Specimens">
+          <span aria-hidden="true">SPECI</span>
+          <span class="specimens__title-second" aria-hidden="true">MENS</span>
+        </h2>
+        <p class="specimens__catalogue" aria-hidden="true">PLATES 01—07<br>PARTIAL CATALOGUE<br>DO NOT RE-FILE</p>
+        <p class="specimens__intro">A collection of bodies, botanical errors, and instruments of observation. Reproduced badly on purpose. Hover to disturb. Click to open the file.</p>
+      </div>
+
+      <div class="plate-field">
+        <button class="plate plate--witness reveal" type="button" data-plate="witness" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/eye.jpg" alt="" width="820" height="633" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 01</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE WITNESS</span>
+            <span class="plate__meta">SILVER GELATIN / 1896</span>
+          </span>
+        </button>
+
+        <button class="plate plate--choir reveal" type="button" data-plate="choir" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/eye-grid.jpg" alt="" width="1000" height="1000" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 02</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE CHOIR</span>
+            <span class="plate__meta">FOUR EXPOSURES / 1896</span>
+          </span>
+        </button>
+
+        <button class="plate plate--moth reveal" type="button" data-plate="moth" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/moth.jpg" alt="" width="780" height="680" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 03</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE MOURNER</span>
+            <span class="plate__meta">ENGRAVING / 1794</span>
+          </span>
+        </button>
+
+        <button class="plate plate--flower reveal" type="button" data-plate="flower" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/flower.webp" alt="" width="650" height="902" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 04</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">BOTANICAL ERROR</span>
+            <span class="plate__meta">LITHOGRAPH / C. 1830</span>
+          </span>
+        </button>
+
+        <button class="plate plate--map reveal" type="button" data-plate="map" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/map.jpg" alt="" width="1000" height="1000" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 05</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE FIELD</span>
+            <span class="plate__meta">COPPERPLATE / 1794</span>
+          </span>
+        </button>
+
+        <button class="plate plate--head reveal" type="button" data-plate="head" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/head.jpg" alt="" width="760" height="1252" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 06</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">ANATOMY OF A VOICE</span>
+            <span class="plate__meta">ANATOMICAL ENGRAVING / 1831</span>
+          </span>
+        </button>
+
+        <button class="plate plate--swarm reveal" type="button" data-plate="swarm" aria-haspopup="dialog">
+          <span class="plate__figure">
+            <img src="assets/img/butterfly.jpg" alt="" width="880" height="1219" loading="lazy">
+            <span class="plate__open" aria-hidden="true">OPEN FILE ↗</span>
+            <span class="plate__stamp" aria-hidden="true">PL. 07</span>
+          </span>
+          <span class="plate__caption">
+            <span class="plate__title">THE SWARM</span>
+            <span class="plate__meta">CHROMOLITHOGRAPH / 1898</span>
+          </span>
+        </button>
+
+        <p class="plate-field__aside" aria-hidden="true">FILES RECOVERED<br>FROM A DAMAGED<br>EXTERNAL DRIVE.<br>NO ORIGINALS.</p>
+        <p class="plate-field__note" aria-hidden="true">THE PLATES ARE NOT<br>IN ORDER. THE ORDER<br>IS NOT THE POINT.</p>
+        <svg class="plate-field__scribble" viewBox="0 0 700 260" aria-hidden="true">
+          <path d="M8 195c61-43 104-34 122 20 16 51 55-123 100-114 36 8 31 103 70 106 47 4 55-109 106-107 42 2 42 97 89 94 47-3 51-78 99-75 38 2 55 47 98 42"/>
+          <path d="M557 78c35 11 67 40 91 77M636 150l12-2-7-18"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="sheet cutting" id="cutting-table" aria-labelledby="cuttingTitle">
+      <div class="cutting__masthead reveal">
+        <span class="cutting__index" aria-hidden="true">02</span>
+        <h2 class="cutting__title" id="cuttingTitle"><span>CUTTING</span><em>TABLE</em></h2>
+        <p class="cutting__catalogue" aria-hidden="true">INTERACTIVE SHEET / NINE PIECES / NO ORIGINAL</p>
+      </div>
+
+      <div class="cutting__intro reveal">
+        <p class="cutting__display">MAKE YOUR OWN<br><em>EVIDENCE.</em></p>
+        <p class="cutting__copy">The archive is not fixed. Move the pieces. Turn the type. There is no original arrangement; there is only the one you leave behind.</p>
+      </div>
+
+      <div class="cutting__layout">
+        <aside class="cutting__controls reveal">
+          <p class="micro-label">TABLE 02 / ACTIVE SURFACE</p>
+          <p class="cutting__instructions">Drag the scraps. Turn the type. Do not look for the original arrangement.</p>
+
+          <dl class="cutting__specs">
+            <div><dt>PIECES</dt><dd>09</dd></div>
+            <div><dt>ORIGINALS</dt><dd>00</dd></div>
+            <div><dt>ORDER</dt><dd>OPEN</dd></div>
+          </dl>
+
+          <div class="cutting__buttons">
+            <button class="action-link" id="tableShuffle" type="button">
+              <span class="action-link__label">SHUFFLE THE TABLE</span>
+              <span class="action-link__arrow" aria-hidden="true">↻</span>
+            </button>
+            <button class="text-button" id="tableTurn" type="button">TURN 15°</button>
+            <button class="text-button" id="tableReset" type="button">RESET</button>
+          </div>
+
+          <p class="cutting__status" id="tableStatus" aria-live="polite">NO PIECE SELECTED / TABLE IS OPEN.</p>
+          <p class="cutting__hint">ARROW KEYS NUDGE. SHIFT FOR SPEED. [ AND ] ROTATE.</p>
+          <p class="cutting__counter">REARRANGEMENTS <span id="tableCount">000</span></p>
+        </aside>
+
+        <div class="cutting-board" id="cuttingBoard" role="group" aria-label="Interactive composition table. Drag the scraps; use arrow keys and bracket keys when a scrap is focused.">
+          <div class="cutting-board__bg" aria-hidden="true">
+            <img class="cutting-board__contour" src="assets/svg/contour.svg" alt="" width="1400" height="1400">
+            <img class="cutting-board__ribbons" src="assets/svg/ribbons.svg" alt="" width="1000" height="700">
+            <span class="cutting-board__label cutting-board__label--tl">TABLE 02 / ACTIVE SURFACE</span>
+            <span class="cutting-board__label cutting-board__label--tr">DO NOT FILE</span>
+            <span class="cutting-board__label cutting-board__label--bl">X 000 / Y 000</span>
+            <span class="cutting-board__label cutting-board__label--br">NO ORIGINAL / NO RETURN</span>
+            <span class="cutting-board__cross cutting-board__cross--a">+</span>
+            <span class="cutting-board__cross cutting-board__cross--b">+</span>
+          </div>
+
+          <div class="scrap scrap--manifesto" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Manifesto scrap: Do you think a signal can be innocent?" data-x=".045" data-y=".09" data-rot="-2" data-w=".40" style="--x:.045;--y:.09;--w:.40;--r:-2deg;">
+            <div class="scrap__inner scrap__inner--manifesto">
+              <span class="manifesto__kicker">INTERACTIVE SHEET / 02</span>
+              <p>DO YOU THINK<br>A SIGNAL<br>CAN BE<br><em>INNOCENT?</em></p>
+              <span class="manifesto__foot">NO ORIGINAL / NO FIXED ORDER</span>
+            </div>
+          </div>
+
+          <div class="scrap scrap--portrait" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Portrait scrap: the sitter" data-x=".035" data-y=".43" data-rot="-4" data-w=".29" style="--x:.035;--y:.43;--w:.29;--r:-4deg;">
+            <div class="scrap__inner">
+              <img src="assets/img/portrait.jpg" alt="" width="1200" height="1100" loading="lazy">
+              <span class="scrap__tape scrap__tape--top" aria-hidden="true"></span>
+              <span class="scrap__tape scrap__tape--bottom" aria-hidden="true"></span>
+            </div>
+            <span class="scrap__tag">FIG. 01 / THE SITTER</span>
+          </div>
+
+          <div class="scrap scrap--choir" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Choir scrap: four mirrored exposures" data-x=".49" data-y=".035" data-rot="4" data-w=".22" style="--x:.49;--y:.035;--w:.22;--r:4deg;">
+            <div class="scrap__inner">
+              <img src="assets/img/eye-grid.jpg" alt="" width="1000" height="1000" loading="lazy">
+              <span class="scrap__red-ring" aria-hidden="true"></span>
+            </div>
+            <span class="scrap__tag">FIG. 02 / THE CHOIR</span>
+          </div>
+
+          <div class="scrap scrap--moth" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Moth scrap: the attendant" data-x=".72" data-y=".055" data-rot="-8" data-w=".19" style="--x:.72;--y:.055;--w:.19;--r:-8deg;">
+            <div class="scrap__inner">
+              <img src="assets/img/moth.jpg" alt="" width="780" height="680" loading="lazy">
+              <span class="scrap__tape scrap__tape--top" aria-hidden="true"></span>
+            </div>
+            <span class="scrap__tag">SPECIMEN 03 / ATTENDANT</span>
+          </div>
+
+          <div class="scrap scrap--head" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Anatomical head scrap" data-x=".68" data-y=".45" data-rot="5" data-w=".20" style="--x:.68;--y:.45;--w:.20;--r:5deg;">
+            <div class="scrap__inner">
+              <img src="assets/img/head.jpg" alt="" width="760" height="1252" loading="lazy">
+              <span class="scrap__red-ring" aria-hidden="true"></span>
+            </div>
+            <span class="scrap__tag">PLATE 06 / A VOICE</span>
+          </div>
+
+          <div class="scrap scrap--flower" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Botanical scrap" data-x=".37" data-y=".37" data-rot="2" data-w=".20" style="--x:.37;--y:.37;--w:.20;--r:2deg;">
+            <div class="scrap__inner scrap__inner--flower">
+              <img src="assets/img/flower.webp" alt="" width="650" height="902" loading="lazy">
+              <span class="scrap__tape scrap__tape--bottom" aria-hidden="true"></span>
+            </div>
+            <span class="scrap__tag">PLATE 04 / BOTANICAL ERROR</span>
+          </div>
+
+          <div class="scrap scrap--ribbon" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Red ribbon scrap" data-x=".35" data-y=".17" data-rot="-3" data-w=".35" style="--x:.35;--y:.17;--w:.35;--r:-3deg;">
+            <div class="scrap__inner scrap__inner--ribbon">
+              <svg viewBox="0 0 500 160" aria-hidden="true">
+                <path d="M-20 123C96 102 139 38 246 62 347 84 380 146 520 76" fill="none" stroke="#ffffff" stroke-width="49"/>
+                <path d="M-20 123C96 102 139 38 246 62 347 84 380 146 520 76" fill="none" stroke="#b00000" stroke-width="38"/>
+                <path d="M-20 123C96 102 139 38 246 62 347 84 380 146 520 76" fill="none" stroke="#ffffff" stroke-width="1.4" opacity=".8"/>
+              </svg>
+              <span class="scrap__ribbon-label">THE SIGNAL IS A MATERIAL</span>
+            </div>
+          </div>
+
+          <div class="scrap scrap--eye" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Eye triangle scrap" data-x=".81" data-y=".64" data-rot="9" data-w=".15" style="--x:.81;--y:.64;--w:.15;--r:9deg;">
+            <div class="scrap__inner scrap__inner--eye">
+              <svg viewBox="0 0 200 200" aria-hidden="true">
+                <path d="M100 20 184 174H16Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+                <ellipse cx="100" cy="120" rx="49" ry="27" fill="none" stroke="#ffffff" stroke-width="2"/>
+                <circle cx="100" cy="120" r="15" fill="none" stroke="#ffffff" stroke-width="2"/>
+                <circle cx="100" cy="120" r="5" fill="#b00000"/>
+                <g stroke="#ffffff" stroke-width="1.2">
+                  <path d="M100 4v22M65 13l10 20M135 13l-10 20M26 54l18 12M174 54l-18 12M4 100h24M196 100h-24"/>
+                </g>
+                <path d="M33 171 167 35" stroke="#b00000" stroke-width="2.4"/>
+              </svg>
+            </div>
+            <span class="scrap__tag">THE EYE IS NOT A WINDOW</span>
+          </div>
+
+          <div class="scrap scrap--tape" tabindex="0" role="group" aria-roledescription="draggable scrap" aria-label="Taped label scrap: no fixed order" data-x=".51" data-y=".70" data-rot="-6" data-w=".24" style="--x:.51;--y:.70;--w:.24;--r:-6deg;">
+            <div class="scrap__inner scrap__inner--tape">
+              <span class="tape__small">APPARITION 02 / 03:33</span>
+              <strong>NO FIXED<br>ORDER</strong>
+              <span class="tape__rule"></span>
+              <span class="tape__small">LEAVE IT FACE DOWN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cutting__foot">
+        <span>COMPOSITION 02 / NO ORIGINAL</span>
+        <span>DRAG RESPONSIBLY / THE ARRANGEMENT IS TEMPORARY</span>
+      </div>
+    </section>
+
+    <section class="sheet fragments" id="fragments" aria-labelledby="fragmentsTitle">
+      <div class="fragments__texture" aria-hidden="true">
+        <img src="assets/img/eye-diagram.webp" alt="" width="1200" height="627">
+      </div>
+
+      <div class="fragments__masthead reveal">
+        <span class="fragments__index" aria-hidden="true">03</span>
+        <h2 class="fragments__title" id="fragmentsTitle">FRAGMENTS</h2>
+        <p class="fragments__note" aria-hidden="true">FROM THE UNPUBLISHED NOTEBOOKS</p>
+      </div>
+
+      <div class="fragments__stage">
+        <p class="fragments__display reveal">NOTHING<br><em>ARRIVES</em><br>CLEAN.</p>
+
+        <div class="fragment fragment--one reveal">
+          <span class="fragment__no" aria-hidden="true">F—01</span>
+          <p>I stopped trusting the sky the night it started sending me faxes.</p>
+        </div>
+
+        <div class="fragment fragment--two reveal">
+          <span class="fragment__no" aria-hidden="true">F—02</span>
+          <p>The room was empty, but the microphone kept breathing.</p>
+        </div>
+
+        <div class="fragment fragment--three reveal">
+          <span class="fragment__no" aria-hidden="true">F—03</span>
+          <p>Every archive is a haunted house with better lighting.</p>
+        </div>
+
+        <div class="fragment fragment--four reveal">
+          <span class="fragment__no" aria-hidden="true">F—04</span>
+          <p>We mistook the hum for company.<br>We were wrong.<br>We kept listening.</p>
+        </div>
+
+        <p class="fragments__vertical" aria-hidden="true">DO NOT READ ALOUD / DO NOT READ ALOUD / DO NOT READ ALOUD</p>
+        <p class="fragments__warning reveal"><span aria-hidden="true">✳</span> FOUND ON A DISC LABELLED “DO NOT PLAY”. THE DISC WAS PLAYED.</p>
+
+        <span class="fragments__cross" aria-hidden="true">×</span>
+        <svg class="fragments__scratch" viewBox="0 0 640 220" aria-hidden="true">
+          <path d="M4 178C90 39 124 218 203 91c43-69 67 101 132 42 50-45 85 39 139-40 31-45 75-32 156 45"/>
+          <path d="M28 50c40 52 47 99 23 147M621 31c-48 49-54 106-33 170"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="sheet apparatus" id="apparatus" aria-labelledby="apparatusTitle">
+      <div class="apparatus__masthead reveal">
+        <span class="apparatus__index" aria-hidden="true">04</span>
+        <h2 class="apparatus__title" id="apparatusTitle">APPARATUS</h2>
+        <p class="apparatus__note" aria-hidden="true">INTERACTIVE OBJECT / ONE (1)</p>
+      </div>
+
+      <div class="apparatus__intro reveal">
+        <p class="apparatus__display">A SMALL MACHINE<br><em>FOR MAKING DECISIONS</em><br>YOU WILL LATER DENY.</p>
+        <p class="apparatus__copy">Generate a mark. Do not interpret it. If the mark looks familiar, stop. The apparatus does not remember you; it only remembers the shape of your hand.</p>
+      </div>
+
+      <div class="apparatus__grid">
+        <div class="apparatus__controls reveal">
+          <p class="micro-label">OPERATING INSTRUCTIONS</p>
+          <ol class="apparatus__list">
+            <li><span>01</span> Draw a mark.</li>
+            <li><span>02</span> Read the name silently.</li>
+            <li><span>03</span> Keep it, or bury it.</li>
+            <li><span>04</span> Do not ask what it means.</li>
+          </ol>
+
+          <div class="apparatus__buttons">
+            <button class="action-link action-link--black" id="generateSigil" type="button">
+              <span class="action-link__label">DRAW A MARK</span>
+              <span class="action-link__arrow" aria-hidden="true">↻</span>
+            </button>
+            <button class="text-button" id="downloadSigil" type="button">SAVE SVG <span aria-hidden="true">↓</span></button>
+          </div>
+
+          <p class="apparatus__counter"><span id="sigilCount">NO. 001</span> / THE MACHINE IS AWAKE</p>
+          <p class="apparatus__secret" id="apparatusSecret" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="sigil-machine reveal" id="sigilMachine">
+          <div class="sigil-machine__bar">
+            <span>APPARATUS_04 / SIGIL ENGINE</span>
+            <span>DO NOT CIRCULATE</span>
+          </div>
+          <div class="sigil-machine__stage">
+            <svg id="sigilSvg" viewBox="0 0 500 500" role="img" aria-labelledby="sigilTitle sigilDesc">
+              <title id="sigilTitle">A generated sigil</title>
+              <desc id="sigilDesc">A diagram of circles, lines, and red marks.</desc>
+              <g fill="none" stroke="#000" stroke-width="1.2">
+                <circle cx="250" cy="250" r="188"/>
+                <circle cx="250" cy="250" r="134" stroke-dasharray="3 9"/>
+                <ellipse cx="250" cy="250" rx="157" ry="86"/>
+                <path d="M250 18v464M18 250h464"/>
+                <path d="M250 98 361 395H139Z" stroke-dasharray="2 8"/>
+                <circle cx="250" cy="250" r="19"/>
+              </g>
+              <g fill="none" stroke="#b00000" stroke-width="1.8">
+                <path d="M91 397c65-93 94-60 124 18 23 59 44-83 77-97 32-14 42 65 78 61 43-4 38-72 75-83"/>
+              </g>
+            </svg>
+            <span class="sigil-machine__corner sigil-machine__corner--tl" aria-hidden="true"></span>
+            <span class="sigil-machine__corner sigil-machine__corner--tr" aria-hidden="true"></span>
+            <span class="sigil-machine__corner sigil-machine__corner--bl" aria-hidden="true"></span>
+            <span class="sigil-machine__corner sigil-machine__corner--br" aria-hidden="true"></span>
+            <span class="sigil-machine__stamp" aria-hidden="true">NO FIXED<br>MEANING</span>
+          </div>
+          <div class="sigil-machine__readout">
+            <span class="micro-label">DESIGNATION</span>
+            <p id="sigilName" aria-live="polite">THE MOUTH THAT REMEMBERS ITS OWN NAME</p>
+            <div class="sigil-machine__meta">
+              <span id="sigilCode">SIG-0001-A</span>
+              <span id="sigilInstruction">KEEP IT IN YOUR MOUTH UNTIL MORNING.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet frequencies" id="frequencies" aria-labelledby="frequenciesTitle">
+      <div class="frequencies__top">
+        <div class="frequencies__masthead reveal">
+          <span class="frequencies__index" aria-hidden="true">05</span>
+          <h2 class="frequencies__title" id="frequenciesTitle">FREQUENCIES</h2>
+          <p class="frequencies__note" aria-hidden="true">FOUR CARRIERS / NO BROADCAST</p>
+        </div>
+
+        <p class="frequencies__intro reveal">Sound is generated in the browser. Headphones recommended; silence also acceptable. There is no end of track.</p>
+      </div>
+
+      <div class="frequency-console reveal">
+        <div class="frequency-console__left">
+          <div class="frequency-readout">
+            <span class="micro-label">CURRENT FREQUENCY</span>
+            <p><span id="frequencyNumber">61.7</span><small>HZ</small></p>
+            <span class="frequency-readout__sub" id="frequencySub">CARRIER 02 / THE WITNESS</span>
+          </div>
+
+          <div class="frequency-wave" id="frequencyWave" aria-hidden="true">
+            <svg viewBox="0 0 900 180" preserveAspectRatio="none">
+              <path d="M0 90C38 90 38 37 76 37s38 106 76 106 38-96 76-96 38 68 76 68 38-98 76-98 38 86 76 86 38-50 76-50 38 93 76 93 38-132 76-132 38 100 76 100 38-58 76-58 38 80 76 80 38-96 76-96 38 36 76 36 38-5 76-5" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path class="frequency-wave__pulse" d="M0 90C38 90 38 37 76 37s38 106 76 106 38-96 76-96 38 68 76 68 38-98 76-98 38 86 76 86 38-50 76-50 38 93 76 93 38-132 76-132 38 100 76 100 38-58 76-58 38 80 76 80 38-96 76-96 38 36 76 36 38-5 76-5" fill="none" stroke="currentColor" stroke-width="5" opacity=".18"/>
+            </svg>
+            <span class="frequency-wave__baseline" aria-hidden="true"></span>
+          </div>
+
+          <div class="frequency-controls">
+            <button class="frequency-play" id="frequencyPlay" type="button" aria-label="Play the selected frequency">
+              <span class="frequency-play__icon frequency-play__icon--play" aria-hidden="true">▶</span>
+              <span class="frequency-play__icon frequency-play__icon--pause" aria-hidden="true">||</span>
+            </button>
+            <div class="frequency-controls__now">
+              <span class="micro-label">NOW TRANSMITTING</span>
+              <strong id="frequencyTitle">THE WITNESS</strong>
+              <span id="frequencyDesc">A microphone that has learned to breathe.</span>
+            </div>
+            <div class="frequency-meter" id="frequencyMeter" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <label class="frequency-volume">
+              <span>VOL.</span>
+              <input id="frequencyVolume" type="range" min="0" max="100" value="52" step="1" aria-label="Volume">
+            </label>
+          </div>
+        </div>
+
+        <div class="frequency-console__right">
+          <div class="frequency-channels" role="group" aria-label="Available frequencies">
+            <button class="channel" type="button" data-channel="0" aria-pressed="false">
+              <span class="channel__no">01</span>
+              <span class="channel__name">LOW MASS</span>
+              <span class="channel__hz">41.2</span>
+              <span class="channel__desc">A room beneath a room.</span>
+            </button>
+            <button class="channel is-active" type="button" data-channel="1" aria-pressed="true">
+              <span class="channel__no">02</span>
+              <span class="channel__name">THE WITNESS</span>
+              <span class="channel__hz">61.7</span>
+              <span class="channel__desc">A microphone that has learned to breathe.</span>
+            </button>
+            <button class="channel" type="button" data-channel="2" aria-pressed="false">
+              <span class="channel__no">03</span>
+              <span class="channel__name">CARRIER (DEAD)</span>
+              <span class="channel__hz">87.1</span>
+              <span class="channel__desc">The sound of a line left open.</span>
+            </button>
+            <button class="channel" type="button" data-channel="3" aria-pressed="false">
+              <span class="channel__no">04</span>
+              <span class="channel__name">WHITE ROOM</span>
+              <span class="channel__hz">33.0</span>
+              <span class="channel__desc">No furniture. No exit.</span>
+            </button>
+          </div>
+          <p class="frequency-console__note">SYNTHESISED LIVE / 44.1 KHZ / MONO / NO RECORDING</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet transmissions" id="transmissions" aria-labelledby="transmissionsTitle">
+      <div class="transmissions__masthead reveal">
+        <span class="transmissions__index" aria-hidden="true">06</span>
+        <h2 class="transmissions__title" id="transmissionsTitle">TRANSMISSIONS</h2>
+        <p class="transmissions__note" aria-hidden="true">INCOMING / UNVERIFIED</p>
+      </div>
+
+      <div class="transmissions__intro reveal">
+        <p class="transmissions__display">THE LINE IS OPEN.<br><em>NOBODY IS SPEAKING.</em></p>
+        <p class="transmissions__copy">Messages from an unknown sender. No archive is complete without its errors. Press receive. Do not reply.</p>
+      </div>
+
+      <div class="transmission-grid">
+        <div class="transmission-machine reveal">
+          <div class="transmission-machine__bar">
+            <span>RECEIVER_06 / FAX SIMULATION</span>
+            <span><span class="rec-dot rec-dot--blink" aria-hidden="true"></span> LIVE LINE</span>
+          </div>
+          <div class="transmission-machine__paper">
+            <span class="transmission-machine__stamp" aria-hidden="true">INCOMING</span>
+            <p class="transmission-machine__message" id="transmissionMessage" aria-live="polite">THE LINE IS OPEN.<br>NO MESSAGE HAS ARRIVED.<br>PRESS RECEIVE.</p>
+            <div class="transmission-machine__meta">
+              <span id="transmissionCode">TX—0000</span>
+              <span id="transmissionTime">00:00:00</span>
+            </div>
+          </div>
+          <div class="transmission-machine__controls">
+            <button class="action-link action-link--black" id="receiveButton" type="button">
+              <span class="action-link__label">RECEIVE TRANSMISSION</span>
+              <span class="action-link__arrow" aria-hidden="true">↯</span>
+            </button>
+            <span class="transmissions__strength">SIGNAL <i id="signalStrength"></i></span>
+          </div>
+        </div>
+
+        <div class="transmission-log reveal">
+          <div class="transmission-log__head">
+            <span class="micro-label">LOG / LAST THREE</span>
+            <span class="micro-label">UNVERIFIED</span>
+          </div>
+          <ol id="transmissionLog" class="transmission-log__list">
+            <li class="log-empty">NO EARLIER TRANSMISSIONS.<br>THE LOG IS CLEAN.</li>
+          </ol>
+          <p class="transmission-log__note">MESSAGES ARE GENERATED LOCALLY. NOTHING IS SENT. NOTHING IS KEPT AFTER THE WINDOW CLOSES.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet other-worlds" id="other-worlds" aria-labelledby="otherTitle">
+      <div class="worlds__masthead reveal">
+        <span class="worlds__index" aria-hidden="true">07</span>
+        <h2 class="worlds__title" id="otherTitle">OTHER<br><em>WORLDS</em></h2>
+        <p class="worlds__note" aria-hidden="true">EXTERNAL / UNVERIFIED</p>
+      </div>
+
+      <div class="other-worlds__intro reveal">
+        <p class="other-worlds__display">SIX DOORS<br><em>THAT DO NOT BELONG<br>TO THIS BUILDING.</em></p>
+        <p class="other-worlds__copy">Open at your own risk. No affiliation, no algorithm, no endorsement. The internet is still a place you can get lost in.</p>
+      </div>
+
+      <div class="worlds-list">
+        <a class="world reveal" href="https://ubu.com/" target="_blank" rel="noopener noreferrer">
+          <span class="world__no">01</span>
+          <span class="world__name">UBUWEB</span>
+          <span class="world__desc">An archive of the impractical.</span>
+          <span class="world__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="world reveal" href="https://rhizome.org/art/artbase/" target="_blank" rel="noopener noreferrer">
+          <span class="world__no">02</span>
+          <span class="world__name">RHIZOME ARTBASE</span>
+          <span class="world__desc">Net art, kept alive by stubbornness.</span>
+          <span class="world__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="world reveal" href="https://publicdomainreview.org/" target="_blank" rel="noopener noreferrer">
+          <span class="world__no">03</span>
+          <span class="world__name">THE PUBLIC DOMAIN REVIEW</span>
+          <span class="world__desc">The past, unlicensed.</span>
+          <span class="world__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="world reveal" href="https://monoskop.org/" target="_blank" rel="noopener noreferrer">
+          <span class="world__no">04</span>
+          <span class="world__name">MONOSKOP</span>
+          <span class="world__desc">A library for the disappeared.</span>
+          <span class="world__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="world reveal" href="https://archive.org/" target="_blank" rel="noopener noreferrer">
+          <span class="world__no">05</span>
+          <span class="world__name">INTERNET ARCHIVE</span>
+          <span class="world__desc">The backup of a backup.</span>
+          <span class="world__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="world reveal" href="https://www.are.na/" target="_blank" rel="noopener noreferrer">
+          <span class="world__no">06</span>
+          <span class="world__name">ARE.NA</span>
+          <span class="world__desc">A garden of other people's references.</span>
+          <span class="world__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <p class="other-worlds__note reveal">LINKS OPEN IN A NEW WINDOW. THE BROADCAST IS NOT RESPONSIBLE FOR WHAT YOU FIND THERE.</p>
+    </section>
+
+    <footer class="colophon" id="colophon" aria-labelledby="colophonTitle">
+      <div class="colophon__masthead reveal">
+        <span class="colophon__index" aria-hidden="true">08</span>
+        <h2 class="colophon__title" id="colophonTitle">COLOPHON</h2>
+        <p class="colophon__note" aria-hidden="true">END MATTER / KEEP THIS PAGE</p>
+      </div>
+
+      <div class="colophon__top">
+        <div class="colophon__statement reveal">
+          <p>THE HOLLOW BROADCAST<br>IS AN INDEPENDENT<br>TRANSMISSION.</p>
+          <p>ISSUE 00 / MMXXVI<br>EDITED IN THE DARK<br>PRINTED ON A SCREEN.</p>
+        </div>
+
+        <div class="colophon__credits reveal">
+          <div>
+            <span class="micro-label">PLATES</span>
+            <p>Public domain and CC0 material from Wikimedia Commons. John Harris; Frances Benjamin Johnston; Samuel Dunn; William Home Lizars; <em>Bocagea viridis</em>; <em>The Butterfly Book</em>; <em>A Complete Physico-Medical Treatise on the Human Eye</em>.</p>
+          </div>
+          <div>
+            <span class="micro-label">TYPE</span>
+            <p>Six Caps; Archivo Black; Bodoni Moda; Space Mono. All under the SIL Open Font License.</p>
+          </div>
+          <div>
+            <span class="micro-label">MACHINE</span>
+            <p>HTML. CSS. Vanilla JavaScript. No backend. No analytics. No cookies. No master.</p>
+          </div>
+          <div>
+            <span class="micro-label">NOTICE</span>
+            <p>All text is fiction. Any resemblance to a living signal is intentional. This page will not remember you.</p>
+          </div>
+        </div>
+
+        <div class="colophon__seal reveal" aria-hidden="true">
+          <svg viewBox="0 0 240 240">
+            <defs>
+              <path id="sealPath" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/>
+            </defs>
+            <circle cx="120" cy="120" r="104" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="120" cy="120" r="80" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 6"/>
+            <text font-size="8.5" letter-spacing="3.1" fill="currentColor">
+              <textPath href="#sealPath">THE HOLLOW BROADCAST · ISSUE 00 · DO NOT CIRCULATE · MMXXVI ·</textPath>
+            </text>
+            <g fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M120 56v128M56 120h128"/>
+              <circle cx="120" cy="120" r="31"/>
+              <path d="M120 89 147 145H93Z" stroke-dasharray="2 6"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="colophon__bottom">
+        <span>NO RIGHTS RESERVED / NO RIGHTS OBSERVED</span>
+        <button class="text-button text-button--light" type="button" data-open-index>INDEX <span aria-hidden="true">[ I ]</span></button>
+        <a class="back-to-top" href="#entrance">RETURN TO SURFACE <span aria-hidden="true">↑</span></a>
+      </div>
+
+      <div class="colophon__end" aria-hidden="true">END OF<br>TRANSMISSION</div>
+    </footer>
+  </main>
+
+  <dialog class="index-dialog" id="indexDialog" aria-labelledby="indexTitle">
+    <div class="index-dialog__bar">
+      <span>CONTENTS / THE HOLLOW BROADCAST / ISSUE 00</span>
+      <button class="index-dialog__close" type="button" data-close-index aria-label="Close index">CLOSE ×</button>
+    </div>
+    <div class="index-dialog__body">
+      <div class="index-dialog__heading">
+        <p class="micro-label">A FIELD GUIDE TO UNRECEIVED MESSAGES</p>
+        <h2 id="indexTitle">INDEX</h2>
+        <p class="index-dialog__note">EIGHT PARTS. NO FIXED ORDER.<br>THE PAGE IS LONGER THAN IT LOOKS.</p>
+      </div>
+
+      <ol class="index-list">
+        <li><a href="#entrance" data-index-link>
+          <span class="index-list__no">00</span>
+          <span class="index-list__title">ENTRANCE</span>
+          <span class="index-list__desc">A title, a body, and a signal that will not identify itself.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#specimens" data-index-link>
+          <span class="index-list__no">01</span>
+          <span class="index-list__title">SPECIMENS</span>
+          <span class="index-list__desc">Bodies, botanical errors, and instruments of observation.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#cutting-table" data-index-link>
+          <span class="index-list__no">02</span>
+          <span class="index-list__title">THE CUTTING TABLE</span>
+          <span class="index-list__desc">Drag the evidence into a new arrangement.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#fragments" data-index-link>
+          <span class="index-list__no">03</span>
+          <span class="index-list__title">FRAGMENTS</span>
+          <span class="index-list__desc">Notes recovered from a damaged external drive.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#apparatus" data-index-link>
+          <span class="index-list__no">04</span>
+          <span class="index-list__title">APPARATUS</span>
+          <span class="index-list__desc">A small machine for making decisions you will later deny.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#frequencies" data-index-link>
+          <span class="index-list__no">05</span>
+          <span class="index-list__title">FREQUENCIES</span>
+          <span class="index-list__desc">Four carriers. None of them broadcasting.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#transmissions" data-index-link>
+          <span class="index-list__no">06</span>
+          <span class="index-list__title">TRANSMISSIONS</span>
+          <span class="index-list__desc">Messages from an unknown sender. Do not reply.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#other-worlds" data-index-link>
+          <span class="index-list__no">07</span>
+          <span class="index-list__title">OTHER WORLDS</span>
+          <span class="index-list__desc">Six doors that do not belong to this building.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="#colophon" data-index-link>
+          <span class="index-list__no">08</span>
+          <span class="index-list__title">COLOPHON</span>
+          <span class="index-list__desc">Sources, type, and the end of the transmission.</span>
+          <span class="index-list__arrow" aria-hidden="true">→</span>
+        </a></li>
+      </ol>
+
+      <div class="index-dialog__foot">
+        <span>NO COOKIES / NO ALGORITHM / NO MASTER</span>
+        <span>MMXXVI</span>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="plate-dialog" id="plateDialog" aria-labelledby="plateDialogTitle">
+    <div class="plate-dialog__bar">
+      <span id="plateDialogNo">PLATE 01 / THE WITNESS</span>
+      <button class="plate-dialog__close" type="button" id="plateClose" aria-label="Close plate">CLOSE ×</button>
+    </div>
+    <div class="plate-dialog__grid">
+      <div class="plate-dialog__image">
+        <img id="plateDialogImage" src="assets/img/eye.jpg" alt="">
+      </div>
+      <div class="plate-dialog__body">
+        <p class="micro-label" id="plateDialogMeta">SILVER GELATIN / 1896</p>
+        <h2 id="plateDialogTitle">THE WITNESS</h2>
+        <p class="plate-dialog__text" id="plateDialogText"></p>
+        <p class="plate-dialog__provenance" id="plateDialogSource"></p>
+        <p class="plate-dialog__status">FILE STATUS: CORRUPTED / PUBLIC DOMAIN / DO NOT RE-UPLOAD</p>
+        <button class="text-button" type="button" id="platePrev">← PREVIOUS</button>
+        <button class="text-button" type="button" id="plateNext">NEXT →</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+

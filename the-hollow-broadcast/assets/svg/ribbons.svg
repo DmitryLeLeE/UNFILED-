@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" fill="none">
+  <g stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M-90 596C170 570 224 438 392 414C551 391 630 459 756 338C880 219 895 99 1080 61" stroke="#ffffff" stroke-width="92" opacity=".92"/>
+    <path d="M-90 596C170 570 224 438 392 414C551 391 630 459 756 338C880 219 895 99 1080 61" stroke="#b00000" stroke-width="76"/>
+    <path d="M-90 596C170 570 224 438 392 414C551 391 630 459 756 338C880 219 895 99 1080 61" stroke="#000000" stroke-width="1.4" opacity=".35"/>
+
+    <path d="M-80 142C116 160 185 267 330 268C485 269 558 174 694 188C828 202 938 322 1080 350" stroke="#ffffff" stroke-width="65"/>
+    <path d="M-80 142C116 160 185 267 330 268C485 269 558 174 694 188C828 202 938 322 1080 350" stroke="#b00000" stroke-width="50"/>
+    <path d="M-80 142C116 160 185 267 330 268C485 269 558 174 694 188C828 202 938 322 1080 350" stroke="#000000" stroke-width="1.2" opacity=".28"/>
+
+    <path d="M-40 464C150 445 258 528 424 501C558 480 655 368 797 391C904 408 973 480 1060 505" stroke="#b00000" stroke-width="11"/>
+    <path d="M-40 464C150 445 258 528 424 501C558 480 655 368 797 391C904 408 973 480 1060 505" stroke="#ffffff" stroke-width="2" opacity=".85"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="1" opacity=".6">
+    <path d="M60 80h120M60 92h88M60 104h54"/>
+    <path d="M880 612h-120M880 624h-88M880 636h-54"/>
+    <circle cx="940" cy="620" r="33"/>
+    <path d="M940 579v82M899 620h82"/>
+  </g>
+</svg>

@@ -1,0 +1,658 @@
+/* ==========================================================================
+   THE HOLLOW BROADCAST — PHYSICAL MATERIALS
+   Torn paper masks, photocopy grain, toner, tape, ink fills and hand marks.
+   This layer is applied over the composition, never as a flat global filter.
+   ========================================================================== */
+
+:root {
+  --paper-ink: #080808;
+  --paper-fibre: #f6f2e7;
+}
+
+/* --------------------------------------------------------------------------
+   The sheet itself: every major section is a torn piece of paper
+   -------------------------------------------------------------------------- */
+
+.entrance,
+.specimens,
+.cutting,
+.fragments,
+.apparatus,
+.frequencies,
+.transmissions,
+.other-worlds,
+.colophon {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+}
+
+.entrance {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-02.svg");
+  mask-image: url("assets/paper/torn-section-flat-02.svg");
+}
+
+.specimens {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-01.svg");
+  mask-image: url("assets/paper/torn-section-flat-01.svg");
+}
+
+.cutting {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-03.svg");
+  mask-image: url("assets/paper/torn-section-flat-03.svg");
+}
+
+.fragments {
+  -webkit-mask-image: url("assets/paper/torn-side-01.svg");
+  mask-image: url("assets/paper/torn-side-01.svg");
+}
+
+.apparatus {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-02.svg");
+  mask-image: url("assets/paper/torn-section-flat-02.svg");
+}
+
+.frequencies {
+  -webkit-mask-image: url("assets/paper/torn-side-02.svg");
+  mask-image: url("assets/paper/torn-side-02.svg");
+}
+
+.transmissions {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-04.svg");
+  mask-image: url("assets/paper/torn-section-flat-04.svg");
+}
+
+.other-worlds {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-03.svg");
+  mask-image: url("assets/paper/torn-section-flat-03.svg");
+}
+
+.colophon {
+  -webkit-mask-image: url("assets/paper/torn-side-03.svg");
+  mask-image: url("assets/paper/torn-side-03.svg");
+}
+
+/* The old, clean polygon cuts are overruled by the material masks. */
+.fragments,
+.apparatus,
+.frequencies,
+.transmissions,
+.colophon {
+  clip-path: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Paper and photocopy surfaces
+   -------------------------------------------------------------------------- */
+
+.entrance,
+.specimens,
+.cutting,
+.apparatus,
+.other-worlds {
+  background-image: url("assets/textures/paper-fiber.png");
+  background-size: 390px 390px;
+  background-blend-mode: multiply;
+}
+
+.apparatus {
+  background-image: url("assets/textures/paper-fiber.png"), url("assets/textures/ink-smudge.png");
+  background-size: 390px 390px, 880px 620px;
+  background-position: 0 0, 78% 20%;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: multiply, multiply;
+}
+
+.transmissions {
+  background-image: url("assets/textures/paper-fiber.png"), url("assets/textures/scan-streaks.png");
+  background-size: 420px 420px, 900px 620px;
+  background-blend-mode: multiply, multiply;
+}
+
+.fragments,
+.frequencies,
+.colophon {
+  background-image: url("assets/textures/toner-dust.png");
+  background-size: 340px 340px;
+  background-blend-mode: screen;
+}
+
+/* A single fixed xerox screen sits over the whole publication. */
+.xerox-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 74;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: url("assets/textures/xerox-black.png");
+  background-size: 300px 300px;
+  mix-blend-mode: multiply;
+}
+
+.xerox-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image: url("assets/textures/xerox-white.png");
+  background-size: 420px 420px;
+  mix-blend-mode: screen;
+}
+
+.xerox-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: url("assets/textures/scan-streaks.png");
+  background-size: 1100px 760px;
+  mix-blend-mode: overlay;
+}
+
+.grain {
+  opacity: 0.09;
+}
+
+/* --------------------------------------------------------------------------
+   Printed type: ink dropout, not a clean digital fill
+   -------------------------------------------------------------------------- */
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .entrance__band > span,
+  .fragments__display,
+  .plate-dialog__body h2 {
+    background-image: url("assets/textures/ink-white-soft.png");
+    background-size: 290px 290px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Keep the red italics as red ink, not black/white dropout. */
+  .fragments__display em,
+  .worlds__title em {
+    background: none;
+    -webkit-text-fill-color: var(--red-bright);
+    color: var(--red-bright);
+  }
+}
+
+.entrance__hollow {
+  text-shadow: 2px 0 0 rgba(176, 0, 0, 0.14);
+}
+
+.specimens__title > span {
+  text-shadow: 2px 1px 0 rgba(176, 0, 0, 0.11);
+}
+
+.cutting__title > span {
+  text-shadow: 2px 0 0 rgba(176, 0, 0, 0.12);
+}
+
+.apparatus__title,
+.transmissions__title {
+  text-shadow: 2px 1px 0 rgba(176, 0, 0, 0.12);
+}
+
+.worlds__title {
+  text-shadow: 2px 1px 0 rgba(176, 0, 0, 0.12);
+}
+
+.index-dialog__heading h2 {
+  text-shadow: 2px 0 0 rgba(176, 0, 0, 0.12);
+}
+
+.entrance__band {
+  -webkit-mask-image: url("assets/paper/torn-band-01.svg");
+  mask-image: url("assets/paper/torn-band-01.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-image: url("assets/textures/toner-dust.png");
+  background-size: 280px 280px;
+  background-blend-mode: screen;
+}
+
+.apparatus__display {
+  background-image: url("assets/textures/toner-dust.png");
+  background-size: 320px 320px;
+  background-blend-mode: screen;
+  clip-path: polygon(
+    0 1.2%, 2% 0.4%, 4.5% 1.1%, 8% 0.2%, 12% 1.3%, 17% 0.5%,
+    22% 1.4%, 28% 0.3%, 34% 1.1%, 41% 0.2%, 49% 1.3%, 57% 0.4%,
+    64% 1.4%, 72% 0.2%, 80% 1.2%, 88% 0.4%, 94% 1.3%, 100% 0.6%,
+    100% 98.7%, 96% 99.6%, 91% 98.8%, 85% 99.7%, 77% 98.6%,
+    69% 99.6%, 61% 98.7%, 52% 99.7%, 43% 98.6%, 34% 99.6%,
+    25% 98.7%, 17% 99.7%, 9% 98.6%, 0 99.4%
+  );
+}
+
+/* Misregistered red scrawl on the otherwise clean index page. */
+.index-dialog__heading {
+  background-image: url("assets/textures/paper-fiber.png");
+  background-size: 430px 430px;
+  background-blend-mode: multiply;
+}
+
+.index-list li:nth-child(3) a {
+  -webkit-mask-image: url("assets/paper/torn-band-02.svg");
+  mask-image: url("assets/paper/torn-band-02.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------------------------
+   Torn photographic material
+   -------------------------------------------------------------------------- */
+
+.plate__figure {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+}
+
+.plate--witness .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
+  mask-image: url("assets/paper/torn-mask-01.svg");
+}
+
+.plate--choir .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+}
+
+.plate--moth .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-03.svg");
+  mask-image: url("assets/paper/torn-mask-03.svg");
+}
+
+.plate--flower .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
+  mask-image: url("assets/paper/torn-mask-01.svg");
+}
+
+.plate--map .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-04.svg");
+  mask-image: url("assets/paper/torn-mask-04.svg");
+}
+
+.plate--head .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+}
+
+.plate--swarm .plate__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-03.svg");
+  mask-image: url("assets/paper/torn-mask-03.svg");
+}
+
+/* Heavy toner and a second, uneven ink pass on the specimen scans. */
+.plate__figure::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  z-index: 1;
+  background-image: url("assets/textures/halftone.png"), url("assets/textures/xerox-black.png");
+  background-size: 4px 4px, 220px 220px;
+  mix-blend-mode: multiply;
+  opacity: 0.26;
+  pointer-events: none;
+}
+
+/* Tape on selected plates; different placements, different tears. */
+.plate--witness .plate__figure::after,
+.plate--map .plate__figure::after,
+.plate--head .plate__figure::after {
+  position: absolute;
+  z-index: 5;
+  width: 38%;
+  height: 21px;
+  background: url("assets/paper/tape-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.plate--witness .plate__figure::after {
+  top: 5px;
+  left: 8%;
+  transform: rotate(-5deg);
+}
+
+.plate--map .plate__figure::after {
+  right: 4%;
+  bottom: 10%;
+  transform: rotate(4deg);
+}
+
+.plate--head .plate__figure::after {
+  top: 13%;
+  left: 4%;
+  transform: rotate(-9deg);
+}
+
+/* Photographs in the entrance are cut from damaged paper too. */
+.entrance__portrait img {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.entrance__eye img {
+  -webkit-mask-image: url("assets/paper/torn-mask-03.svg");
+  mask-image: url("assets/paper/torn-mask-03.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.entrance__flower img {
+  -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
+  mask-image: url("assets/paper/torn-mask-01.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.moth-trigger {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------------------------
+   Cutting table: torn scraps and a taped board
+   -------------------------------------------------------------------------- */
+
+.scrap__inner {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+}
+
+.scrap--portrait .scrap__inner,
+.scrap--head .scrap__inner {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+}
+
+.scrap--choir .scrap__inner,
+.scrap--flower .scrap__inner {
+  -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
+  mask-image: url("assets/paper/torn-mask-01.svg");
+}
+
+.scrap--moth .scrap__inner,
+.scrap--tape .scrap__inner {
+  -webkit-mask-image: url("assets/paper/torn-mask-03.svg");
+  mask-image: url("assets/paper/torn-mask-03.svg");
+}
+
+.scrap--manifesto .scrap__inner {
+  -webkit-mask-image: url("assets/paper/torn-band-01.svg");
+  mask-image: url("assets/paper/torn-band-01.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.scrap__inner::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  z-index: 3;
+  background-image: url("assets/textures/xerox-black.png");
+  background-size: 190px 190px;
+  mix-blend-mode: multiply;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.cutting-board::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 13%;
+  z-index: 22;
+  width: 19%;
+  height: 16px;
+  background: url("assets/paper/tape-02.svg") center / 100% 100% no-repeat;
+  opacity: 0.7;
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Physical scraps, tape and ink around the instrument panels
+   -------------------------------------------------------------------------- */
+
+.frequency-console {
+  position: relative;
+  background-image: url("assets/textures/toner-dust.png");
+  background-size: 300px 300px;
+  background-blend-mode: screen;
+}
+
+.frequency-console::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 16%;
+  z-index: 8;
+  width: 152px;
+  height: 31px;
+  background: url("assets/paper/tape-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.85;
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.transmission-machine {
+  background-image: url("assets/textures/toner-dust.png");
+  background-size: 350px 350px;
+  background-blend-mode: screen;
+}
+
+.transmission-log {
+  background-image: url("assets/textures/paper-fiber.png");
+  background-size: 360px 360px;
+  background-blend-mode: multiply;
+}
+
+.transmission-log::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 12%;
+  z-index: 6;
+  width: 118px;
+  height: 24px;
+  background: url("assets/paper/tape-02.svg") center / 100% 100% no-repeat;
+  opacity: 0.82;
+  transform: rotate(4deg);
+  pointer-events: none;
+}
+
+.fragments::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url("assets/overlays/scratches-white.svg") center / cover no-repeat;
+  opacity: 0.3;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.fragments::before {
+  content: "";
+  position: absolute;
+  top: 0.5vw;
+  right: 0;
+  z-index: 30;
+  width: 48%;
+  height: clamp(9px, 1.9vw, 26px);
+  background: url("assets/paper/torn-edge-red-02.svg") center / 100% 100% no-repeat;
+  transform: rotate(-2.2deg);
+  pointer-events: none;
+}
+
+.transmissions::before {
+  content: "";
+  position: absolute;
+  right: 2vw;
+  bottom: 12vw;
+  z-index: 2;
+  width: min(34vw, 420px);
+  aspect-ratio: 900 / 260;
+  background: url("assets/illustrations/red-scrawl-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.8;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.specimens__intro {
+  position: absolute;
+}
+
+.specimens__intro::after {
+  content: "";
+  position: absolute;
+  right: -5vw;
+  bottom: -4vw;
+  width: 105px;
+  height: 105px;
+  background: url("assets/illustrations/red-circle-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.65;
+  transform: rotate(9deg);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Dialogs and index: paper, not glass or clean UI cards
+   -------------------------------------------------------------------------- */
+
+.index-dialog,
+.plate-dialog {
+  background-image: url("assets/textures/paper-fiber.png");
+  background-size: 430px 430px;
+  background-blend-mode: multiply;
+}
+
+.index-dialog__bar {
+  background-image: url("assets/textures/toner-dust.png");
+  background-size: 340px 340px;
+  background-blend-mode: screen;
+}
+
+.cutting-board,
+.frequency-console,
+.transmission-machine,
+.transmission-log,
+.plate-dialog {
+  -webkit-mask-image: url("assets/paper/torn-panel-03.svg");
+  mask-image: url("assets/paper/torn-panel-03.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.plate-dialog__image img {
+  -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
+  mask-image: url("assets/paper/torn-mask-01.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile: keep the material layer, but reduce the risk to controls
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .xerox-screen {
+    opacity: 0.13;
+  }
+
+  .xerox-screen::before {
+    opacity: 0.14;
+  }
+
+  .xerox-screen::after {
+    opacity: 0.06;
+  }
+
+  .entrance,
+  .specimens,
+  .cutting,
+  .fragments,
+  .apparatus,
+  .frequencies,
+  .transmissions,
+  .other-worlds,
+  .colophon {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+
+  .plate-dialog {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .frequency-console::before {
+    top: -8px;
+    width: 86px;
+    height: 20px;
+  }
+
+  .transmission-log::before {
+    top: -8px;
+    width: 76px;
+    height: 17px;
+  }
+
+  .fragments::before {
+    top: 0.6vw;
+    height: 9px;
+    width: 55%;
+  }
+
+  .transmissions::before {
+    right: -4vw;
+    bottom: 16vw;
+    width: 60vw;
+  }
+
+  .specimens__intro::after {
+    right: 1vw;
+    bottom: -2vw;
+    width: 66px;
+    height: 66px;
+  }
+}
