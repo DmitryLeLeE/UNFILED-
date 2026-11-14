@@ -360,10 +360,23 @@
         "A spiral is a line that refuses to leave. Follow it inward and the archive becomes a room. Follow it outward and the room becomes an archive.",
       source:
         "Original ink illustration made for this publication. No external source."
+    },
+    errata: {
+      no: "PLATE 11",
+      title: "THE ERRATA",
+      meta: "WRONG INK / MMXXVI",
+      img: "assets/svg/plate-errata.svg",
+      alt: "A bright yellow errata plate with a rough black hand, an eye, blue scribbles and red registration marks.",
+      w: 600,
+      h: 760,
+      text:
+        "A plate printed after the archive was closed. The yellow was not in the palette. The blue was not in the file. The hand was not in the negative. Nobody signed for it. The correction is to leave it visible.",
+      source:
+        "Original illustration made for this publication. No external source."
     }
   };
 
-  const plateOrder = ["witness", "choir", "moth", "flower", "map", "head", "swarm", "hand", "wheel", "spiral"];
+  const plateOrder = ["witness", "choir", "moth", "flower", "map", "head", "swarm", "hand", "wheel", "spiral", "errata"];
   let currentPlateIndex = 0;
   let lastPlateTrigger = null;
 
@@ -1908,6 +1921,35 @@
   }
 
   renderMap(0);
+
+  const mapRoom = $("#map-room");
+  const mapFrame = $(".map-room__frame");
+  const blueRouteToggle = $("#blueRouteToggle");
+  const blueRouteLabel = blueRouteToggle
+    ? blueRouteToggle.querySelector(".blue-route__toggle-label")
+    : null;
+
+  function setBlueRoute(on) {
+    if (!mapRoom || !blueRouteToggle) return;
+    mapRoom.classList.toggle("is-blue", on);
+    blueRouteToggle.setAttribute("aria-pressed", String(on));
+    if (blueRouteLabel) {
+      blueRouteLabel.textContent = on ? "BLUE ROUTE ON" : "TRACE THE BLUE ROUTE";
+    }
+
+    if (on && mapFrame) {
+      mapFrame.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "center"
+      });
+    }
+  }
+
+  if (blueRouteToggle) {
+    blueRouteToggle.addEventListener("click", function () {
+      setBlueRoute(!mapRoom.classList.contains("is-blue"));
+    });
+  }
 
   /* ------------------------------------------------------------------------
      Text cut-up

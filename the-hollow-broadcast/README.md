@@ -19,13 +19,13 @@ Built as a static site for GitHub Pages. No build step. No framework. No backend
 ## What is inside
 
 - **Entrance** — an asymmetric title spread with a photographic sitter, mirrored eye study, moth plate, botanical line art, and hand-drawn signals.
-- **Specimens** — seven public-domain plates and three original ink plates (ten total) reworked into an irregular image archive. Click any plate to open its file.
+- **Specimens** — seven public-domain plates and four original ink plates (eleven total) reworked into an irregular image archive. The bright yellow **ERRATA** insert opens PLATE 11. Click any plate to open its file.
 - **The Cutting Table** — an interactive composition board. Drag the photo scraps, turn the type, shuffle the evidence, and leave a different arrangement behind.
 - **Fragments** — black-page notes, red corrections, and an anatomical eye diagram pressed into the background.
 - **Apparatus** — an interactive sigil engine. Generate marks, read the designation, save the result as an SVG.
 - **Frequencies** — four synthesized drone channels built with Web Audio. No mp3 files, no streaming service, no end of track.
 - **Cultural Residue** — Appendix A: nine original relic drawings that allude to shared pop-culture objects from the 1980s–2010s without using their original imagery. Click a relic to open its file card.
-- **The Map Room** — Appendix B: an original signal map with six interactive field notes, a red route and one incorrect north.
+- **The Map Room** — Appendix B: an original signal map with six interactive field notes, a red route, one incorrect north, and a blue ink-test route that is not in the legend.
 - **Room Tone** — a low, synthesized background hum controlled by the fixed `ROOM TONE [S]` toggle. It starts on click, never autoplays, and can be stopped at any time.
 - **Transmissions** — a local random message receiver with a scrambled type-in effect and a three-entry log.
 - **Other Worlds** — six real external archives and libraries, presented without an algorithm.
@@ -122,21 +122,21 @@ All are self-hosted in WOFF2 format with broad fallbacks in the CSS. If external
 ### Interactions
 
 - Click **INDEX** (or press `I`) to open the contents overlay.
-- Click any specimen to open the plate reader; use previous/next inside the dialog. The reader now includes three original ink plates: THE HAND, THE WHEEL, and THE SPIRAL.
+- Click any specimen to open the plate reader; use previous/next inside the dialog. The reader now includes four original ink plates: THE HAND, THE WHEEL, THE SPIRAL, and THE ERRATA.
 - In Fragments, press **CUT THE TEXT** to assemble a new line from a local pool of fragments. Nothing is saved.
 - In **The Cutting Table**, drag any scrap with a mouse or a finger. Use **SHUFFLE THE TABLE** for a new arrangement, **TURN 15°** to rotate the selected scrap, and **RESET** to return to the printed state. With a scrap focused, arrow keys nudge it, `[` and `]` rotate it, and Shift makes nudges larger.
 - In **Apparatus**, use **DRAW A MARK** to generate a new sigil, and **SAVE SVG** to download it.
 - In **Frequencies**, select a channel, press play, and adjust volume. When you scroll away from the section, a small fixed frequency flag appears so you can stop the sound.
 - Press **ROOM TONE [S]** for a low synthesized room hum. It is generated in the browser, starts only on user action, and stops with a second press.
 - Open **CULTURAL RESIDUE** (Appendix A) and click any relic to open its reader; use previous/next inside the dialog.
-- In **THE MAP ROOM** (Appendix B), select a numbered marker to read its field note, or press **TRACE THE ROUTE** to cycle through all six coordinates.
+- In **THE MAP ROOM** (Appendix B), select a numbered marker to read its field note, press **TRACE THE ROUTE** to cycle through all six coordinates, or press **TRACE THE BLUE ROUTE** to overlay the unauthorised ink-test path.
 - In **Transmissions**, press **RECEIVE TRANSMISSION** to generate a new message.
 - Three touches on the moth produce a small, unnecessary event.
 - The audio volume is remembered in `localStorage`. Nothing else is stored, and nothing is sent anywhere.
 
 ## Sources and licensing
 
-All sourced photographic and illustrative plates are public-domain or CC0 material from Wikimedia Commons and were cropped, converted to high-contrast black and white, and recomposed for this publication. Three additional plates — THE HAND, THE WHEEL, and THE SPIRAL — are original ink drawings made for this publication. The torn-paper, xerox, ink, tape and hand-drawn assets are original to this project.
+All sourced photographic and illustrative plates are public-domain or CC0 material from Wikimedia Commons and were cropped, converted to high-contrast black and white, and recomposed for this publication. Four additional plates — THE HAND, THE WHEEL, THE SPIRAL, and THE ERRATA — are original ink drawings made for this publication. The torn-paper, xerox, ink, tape and hand-drawn assets are original to this project.
 
 See [SOURCES.md](SOURCES.md) for the exact source pages, creators, and licences.
 

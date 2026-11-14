@@ -52,7 +52,7 @@ A title, a sitter, four exposures, a moth, a botanical error, and a signal that
 will not identify itself. The entrance is the cover and the first wrong turn.
 
 ### 01 / SPECIMENS
-Seven public-domain plates and three original ink plates recovered from a damaged external drive. Bodies,
+Seven public-domain plates and four original ink plates recovered from a damaged external drive. Bodies,
 botanical errors and instruments of observation, reproduced badly on purpose.
 Click a plate to open its file.
 
@@ -100,7 +100,7 @@ Plates, type, machine notes and the end of the transmission.
 There is no correct order, but there is an index.
 
 - Open the **INDEX** tab at the right edge, or press `I`.
-- Click any specimen to open its file. The reader now holds ten plates, including THE HAND, THE WHEEL, and THE SPIRAL.
+- Click any specimen to open its file. The reader now holds eleven plates, including THE HAND, THE WHEEL, THE SPIRAL, and the yellow ERRATA insert.
 - In Fragments, press **CUT THE TEXT** to assemble a new line from a local fragment pool.
 - Drag the scraps on **The Cutting Table**; use `SHUFFLE THE TABLE`, `TURN 15°` and `RESET`.
   With a scrap focused, arrow keys nudge it, `[` and `]` rotate it, and `Shift` makes nudges larger.
@@ -108,7 +108,8 @@ There is no correct order, but there is an index.
 - Select a frequency and press play. Sound is generated live in the browser.
 - Press **ROOM TONE [S]** at the right edge, below the index tab, for a low, synthesized room hum. It starts only on click and can be stopped at any time.
 - Open **CULTURAL RESIDUE** from the index or scroll to the appendix. Click a relic to open its file; use previous/next inside.
-- In **THE MAP ROOM**, select any numbered marker to read a field note, or press **TRACE THE ROUTE** to move through all six coordinates.
+- In **THE MAP ROOM**, select any numbered marker to read a field note, press **TRACE THE ROUTE** to move through all six coordinates, or press **TRACE THE BLUE ROUTE** for the unauthorised ink-test route.
+- In **Specimens**, the yellow **ERRATA** insert opens PLATE 11, printed in the wrong ink.
 - Press **RECEIVE TRANSMISSION** in Transmissions. Do not reply.
 - Touch the moth three times. It is not a button.
 
@@ -157,13 +158,13 @@ Individual frames:
 [08 Colophon](previews/08-colophon.jpg) ·
 [Mobile](previews/mobile.jpg)
 
-### ORIGINAL PLATES / PL. 08—10
+### ORIGINAL PLATES / PL. 08—11
 
-![Three original ink plates — The Hand, The Wheel, The Spiral](previews/extra-original-plates.jpg)
+![Four original ink plates — The Hand, The Wheel, The Spiral, The Errata](previews/extra-original-plates.jpg)
 
-Three ink drawings made for this publication, not sourced from an archive:
+Four ink drawings made for this publication, not sourced from an archive:
 **THE HAND**, **THE WHEEL**, and **THE SPIRAL**. All three now open in the
-specimen reader. The catalogue has grown from seven plates to ten.
+specimen reader. The catalogue has grown from seven plates to eleven.
 
 ### FIELD TOOL / TEXT CUT-UP
 
@@ -190,6 +191,18 @@ An interactive field map with six coordinates, an invented coastline, and a
 route that does not agree with the scale.
 
 ![A map room field note](previews/12-map-panel.jpg)
+
+### THE TWO WRONG PAGES
+
+![The Errata insert](previews/13-errata.jpg)
+
+A wrong-ink insert pasted into the specimen archive: acid yellow, hand-drawn,
+blue and red, deliberately outside the palette.
+
+![The Blue Route](previews/14-blue-route.jpg)
+
+An unauthorised test print at the bottom of the map room: electric blue,
+hand-drawn, and not in the legend.
 
 ### SOCIAL CARD / 1200 × 630
 
@@ -237,10 +250,10 @@ The paper, xerox, ink, tape, torn-edge and hand-drawn assets are original to thi
 project. Fonts are distributed under the SIL Open Font License; licence files are
 in `the-hollow-broadcast/assets/fonts/licenses/`.
 
-The nine relic drawings and the signal map are original. Their cultural
-references are textual allusions only; no copyrighted characters, logos,
-footage or original artwork were used. The referenced works remain the property
-of their makers.
+The nine relic drawings, the signal map, the errata plate and the blue-route
+print are original. Their cultural references are textual allusions only; no
+copyrighted characters, logos, footage or original artwork were used. The
+referenced works remain the property of their makers.
 
 The writing, layout and code are released without restriction:
 

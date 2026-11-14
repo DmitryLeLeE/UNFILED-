@@ -58,9 +58,9 @@ The following are original to this project and are not derived from the sources 
 - The cutting-table ribbon system, eye-triangle scrap, taped labels, and drag/rotate/shuffle logic.
 - The physical material layer: torn-paper section and image masks, torn edges, tape, paper scraps, xerox/toner/paper textures, halftone, ink dropout, scratches, and hand-drawn red/black marks in `assets/paper/`, `assets/textures/`, `assets/illustrations/`, and `assets/overlays/`.
 - `assets/svg/contour.svg`, `assets/svg/ribbons.svg`, and `assets/grain.png`.
-- The three original ink plates: `assets/svg/plate-hand.svg`, `assets/svg/plate-wheel.svg`, and `assets/svg/plate-spiral.svg`.
+- The four original ink plates: `assets/svg/plate-hand.svg`, `assets/svg/plate-wheel.svg`, `assets/svg/plate-spiral.svg`, and the yellow `assets/svg/plate-errata.svg`.
 - The nine original relic drawings: `assets/svg/relic-capsule.svg`, `relic-cake.svg`, `relic-monolith.svg`, `relic-balloon.svg`, `relic-rabbit.svg`, `relic-channel.svg`, `relic-redroom.svg`, `relic-vhs.svg`, and `relic-mirror.svg`.
-- The original signal map: `assets/svg/signal-map.svg`, and the six fictional field notes in `script.js`.
+- The original signal map: `assets/svg/signal-map.svg`, the six fictional field notes in `script.js`, and the unauthorised `assets/svg/blue-route.svg` print.
 - The Text Cut-Up tool in Fragments.
 - The audio synthesis, the receiver interaction, and the synthesized room tone.
 

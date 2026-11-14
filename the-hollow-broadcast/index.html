@@ -174,7 +174,7 @@
           <span aria-hidden="true">SPECI</span>
           <span class="specimens__title-second" aria-hidden="true">MENS</span>
         </h2>
-        <p class="specimens__catalogue" aria-hidden="true">PLATES 01—10<br>PARTIAL CATALOGUE<br>DO NOT RE-FILE</p>
+        <p class="specimens__catalogue" aria-hidden="true">PLATES 01—11<br>PARTIAL CATALOGUE<br>DO NOT RE-FILE</p>
         <p class="specimens__intro">A collection of bodies, botanical errors, and instruments of observation. Reproduced badly on purpose. Hover to disturb. Click to open the file.</p>
       </div>
 
@@ -300,13 +300,27 @@
           </span>
         </button>
 
-        <p class="plate-field__aside" aria-hidden="true">FILES RECOVERED<br>FROM A DAMAGED<br>EXTERNAL DRIVE.<br>THREE FROM MEMORY.</p>
+        <p class="plate-field__aside" aria-hidden="true">FILES RECOVERED<br>FROM A DAMAGED<br>EXTERNAL DRIVE.<br>FOUR FROM MEMORY.</p>
         <p class="plate-field__note" aria-hidden="true">THE PLATES ARE NOT<br>IN ORDER. THE ORDER<br>IS NOT THE POINT.</p>
         <svg class="plate-field__scribble" viewBox="0 0 700 260" aria-hidden="true">
           <path d="M8 195c61-43 104-34 122 20 16 51 55-123 100-114 36 8 31 103 70 106 47 4 55-109 106-107 42 2 42 97 89 94 47-3 51-78 99-75 38 2 55 47 98 42"/>
           <path d="M557 78c35 11 67 40 91 77M636 150l12-2-7-18"/>
         </svg>
       </div>
+
+      <aside class="errata" aria-labelledby="errataTitle">
+        <div class="errata__copy">
+          <p class="errata__kicker">ERRATA / INSERT 01 / WRONG INK</p>
+          <h3 class="errata__title" id="errataTitle">THE INK<br><em>WAS NOT<br>BLACK.</em></h3>
+          <p class="errata__text">A plate printed after the archive was closed. The yellow was not in the palette. The blue was not in the file. The hand was not in the negative. Nobody signed for it.</p>
+          <button class="errata__open" type="button" data-plate="errata">OPEN PLATE 11 <span aria-hidden="true">↗</span></button>
+        </div>
+        <button class="errata__figure" type="button" data-plate="errata" aria-label="Open errata plate 11">
+          <img src="assets/svg/plate-errata.svg" alt="A bright yellow errata plate with a rough black hand, an eye, blue scribbles and red registration marks." width="600" height="760" loading="eager">
+          <span class="errata__stamp" aria-hidden="true">PL. 11 / DO NOT FILE</span>
+        </button>
+        <span class="errata__side" aria-hidden="true">ERRATA / PRINTED IN THE WRONG YEAR / DO NOT CORRECT</span>
+      </aside>
     </section>
 
     <section class="sheet cutting" id="cutting-table" aria-labelledby="cuttingTitle">
@@ -859,6 +873,9 @@
           <button class="map-pin" type="button" data-map="dead" style="--x:78%;--y:70.6%" aria-label="Dead Channel" aria-pressed="false"><span>05</span></button>
           <button class="map-pin" type="button" data-map="hollow" style="--x:40.9%;--y:81.5%" aria-label="The Hollow" aria-pressed="false"><span>06</span></button>
           <span class="map-room__tape" aria-hidden="true"></span>
+          <svg class="map-room__blue-line" viewBox="0 0 1600 1000" aria-hidden="true">
+            <path d="M268 690 C 360 770, 500 760, 655 815 C 805 870, 835 690, 695 520 C 565 360, 355 390, 300 274 C 260 190, 520 170, 930 244 C 1140 282, 1190 520, 1248 706" />
+          </svg>
         </div>
 
         <aside class="map-room__panel reveal" aria-live="polite">
@@ -871,6 +888,21 @@
           <p class="map-room__legend">01 NORTH STATION · 02 THE CUT · 03 WITNESS ROCK · 04 LOW TIDE · 05 DEAD CHANNEL · 06 THE HOLLOW</p>
         </aside>
       </div>
+
+      <aside class="blue-route reveal" aria-labelledby="blueRouteTitle">
+        <div class="blue-route__copy">
+          <p class="blue-route__kicker">INK TEST 02 / ROUTE NOT AUTHORIZED</p>
+          <h3 class="blue-route__title" id="blueRouteTitle">THE BLUE<br><em>ROUTE.</em></h3>
+          <p class="blue-route__text">A second route exists only in the test print. It connects the places the official map left out. The line is blue because blue was cheaper. That is the entire legend.</p>
+          <button class="blue-route__toggle" id="blueRouteToggle" type="button" aria-pressed="false">
+            <span class="blue-route__toggle-label">TRACE THE BLUE ROUTE</span>
+            <span aria-hidden="true">↯</span>
+          </button>
+        </div>
+        <figure class="blue-route__figure">
+          <img src="assets/svg/blue-route.svg" alt="A bright blue ink-test print with a rough cream route, compass and red marks." width="1000" height="600" loading="eager">
+        </figure>
+      </aside>
 
       <p class="map-room__notice reveal">MAP IS FICTIONAL / NOT TO SCALE / DO NOT NAVIGATE BY THIS. SIX LOCATIONS, ZERO ORIGINALS.</p>
     </section>
@@ -891,7 +923,7 @@
         <div class="colophon__credits reveal">
           <div>
             <span class="micro-label">PLATES</span>
-            <p>Public domain and CC0 material from Wikimedia Commons. John Harris; Frances Benjamin Johnston; Samuel Dunn; William Home Lizars; <em>Bocagea viridis</em>; <em>The Butterfly Book</em>; <em>A Complete Physico-Medical Treatise on the Human Eye</em>. Three original ink plates. Nine original relic drawings and one signal map.</p>
+            <p>Public domain and CC0 material from Wikimedia Commons. John Harris; Frances Benjamin Johnston; Samuel Dunn; William Home Lizars; <em>Bocagea viridis</em>; <em>The Butterfly Book</em>; <em>A Complete Physico-Medical Treatise on the Human Eye</em>. Four original ink plates. Nine original relic drawings and one signal map.</p>
           </div>
           <div>
             <span class="micro-label">TYPE</span>
