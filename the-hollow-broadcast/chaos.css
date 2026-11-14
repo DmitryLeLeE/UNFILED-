@@ -3522,6 +3522,37 @@ body {
   transform: rotate(1.1deg);
 }
 
+.cutup::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 22px;
+  z-index: 3;
+  width: 100px;
+  height: 26px;
+  background: url("assets/paper/tape-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.82;
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.cutup__stamp {
+  position: absolute;
+  right: -12px;
+  bottom: 24px;
+  z-index: 3;
+  padding: 5px 8px;
+  border: 1px solid var(--red);
+  background: rgba(246, 241, 228, 0.72);
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  pointer-events: none;
+}
+
 .cutup__kicker {
   display: block;
   color: var(--red);
@@ -3883,6 +3914,22 @@ body {
 .relic:nth-child(8) { --rot: -1.4deg; }
 .relic:nth-child(9) { --rot: 0.6deg; }
 
+.relic:nth-child(3) {
+  width: 104%;
+  margin-left: -2%;
+  z-index: 2;
+}
+
+.relic:nth-child(5) {
+  width: 112%;
+  margin-left: -6%;
+  z-index: 4;
+}
+
+.relic:nth-child(5) .relic__figure {
+  box-shadow: 12px 12px 0 var(--red);
+}
+
 .relic:hover,
 .relic:focus-visible {
   transform: rotate(var(--rot, 0deg)) translateY(-7px);
@@ -4188,6 +4235,16 @@ body {
 }
 
 @media (max-width: 1000px) {
+  .relic:nth-child(3) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .relic:nth-child(5) {
+    width: 106%;
+    margin-left: -3%;
+  }
+
   .relics__masthead {
     grid-template-columns: minmax(60px, 12vw) minmax(0, 1fr);
   }
@@ -4256,6 +4313,16 @@ body {
 
   .relic__ref {
     font-size: 4.5px;
+  }
+
+  .relic:nth-child(3),
+  .relic:nth-child(5) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .cutup__stamp {
+    display: none;
   }
 
   .relic:nth-child(9) {
@@ -4565,6 +4632,20 @@ body {
   transform: rotate(0.8deg);
 }
 
+.map-room__panel::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 14%;
+  z-index: 3;
+  width: 92px;
+  height: 24px;
+  background: url("assets/paper/tape-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.84;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
 .map-room__panel-title {
   margin: 9px 0 0;
   font-family: var(--heavy);
@@ -4768,4 +4849,30 @@ body {
   .map-room__notice {
     margin-top: 38px;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Typographic finishing
+   -------------------------------------------------------------------------- */
+
+.relics__title,
+.map-room__title,
+.relics__display,
+.map-room__display,
+.relic-dialog__body h2,
+.map-room__panel-title {
+  text-wrap: balance;
+}
+
+.relics__copy,
+.map-room__copy,
+.relics__notice,
+.map-room__notice,
+.relic-dialog__text {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--white);
 }
