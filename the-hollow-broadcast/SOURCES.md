@@ -62,7 +62,7 @@ The following are original to this project and are not derived from the sources 
 - The nine original relic drawings: `assets/svg/relic-capsule.svg`, `relic-cake.svg`, `relic-monolith.svg`, `relic-balloon.svg`, `relic-rabbit.svg`, `relic-channel.svg`, `relic-redroom.svg`, `relic-vhs.svg`, and `relic-mirror.svg`.
 - The original signal map: `assets/svg/signal-map.svg`, the six fictional field notes in `script.js`, and the unauthorised `assets/svg/blue-route.svg` print.
 - The Text Cut-Up tool in Fragments.
-- The audio synthesis, the receiver interaction, and the synthesized room tone.
+- The audio synthesis, the receiver interaction, the synthesized room tone, and the interface sound engine.
 
 ## Cultural references
 

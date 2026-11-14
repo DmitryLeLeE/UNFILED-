@@ -107,6 +107,7 @@ There is no correct order, but there is an index.
 - Press **DRAW A MARK** in Apparatus to generate a new sigil, then **SAVE SVG** if you want to keep it.
 - Select a frequency and press play. Sound is generated live in the browser.
 - Press **ROOM TONE [S]** at the right edge, below the index tab, for a low, synthesized room hum. It starts only on click and can be stopped at any time.
+- Open the index to switch **SOUND FX** on or off, or press `F`. Interface sounds are synthesized locally: paper, static, stamp and a short ping. Nothing is loaded and nothing autoplays.
 - Open **CULTURAL RESIDUE** from the index or scroll to the appendix. Click a relic to open its file; use previous/next inside.
 - In **THE MAP ROOM**, select any numbered marker to read a field note, press **TRACE THE ROUTE** to move through all six coordinates, or press **TRACE THE BLUE ROUTE** for the unauthorised ink-test route.
 - In **Specimens**, the yellow **ERRATA** insert opens PLATE 11, printed in the wrong ink.
@@ -218,9 +219,9 @@ image is also published as [`assets/og-cover.jpg`](the-hollow-broadcast/assets/o
 Static HTML, CSS and vanilla JavaScript. No build step. No framework. No backend.
 No analytics. No cookies. No master.
 
-The only thing stored locally is the audio volume. The room tone and the four
-carriers are synthesized live in the browser; there are no audio files, no
-streaming service and no autoplay. Nothing is sent anywhere.
+The only thing stored locally is the audio volume. The room tone, the four
+carriers and the interface sounds are synthesized live in the browser; there are
+no audio files, no streaming service and no autoplay. Nothing is sent anywhere.
 
 The source starts at [`the-hollow-broadcast/index.html`](the-hollow-broadcast/index.html).
 The publication is deployed by the GitHub Pages workflow in

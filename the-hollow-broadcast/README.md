@@ -128,6 +128,7 @@ All are self-hosted in WOFF2 format with broad fallbacks in the CSS. If external
 - In **Apparatus**, use **DRAW A MARK** to generate a new sigil, and **SAVE SVG** to download it.
 - In **Frequencies**, select a channel, press play, and adjust volume. When you scroll away from the section, a small fixed frequency flag appears so you can stop the sound.
 - Press **ROOM TONE [S]** for a low synthesized room hum. It is generated in the browser, starts only on user action, and stops with a second press.
+- Open **INDEX** and switch **SOUND FX** on/off (or press `F`). Paper, static, stamp, ping and draw sounds are synthesized locally; nothing autoplays and no audio files are loaded.
 - Open **CULTURAL RESIDUE** (Appendix A) and click any relic to open its reader; use previous/next inside the dialog.
 - In **THE MAP ROOM** (Appendix B), select a numbered marker to read its field note, press **TRACE THE ROUTE** to cycle through all six coordinates, or press **TRACE THE BLUE ROUTE** to overlay the unauthorised ink-test path.
 - In **Transmissions**, press **RECEIVE TRANSMISSION** to generate a new message.

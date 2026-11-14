@@ -5032,6 +5032,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transform: rotate(-7deg);
+  animation: stampIn 0.52s cubic-bezier(0.2, 0.8, 0.2, 1) 0.12s both;
 }
 
 .errata__side {
@@ -5277,5 +5278,130 @@ body {
     inset: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Interface sound control and motion finish
+   -------------------------------------------------------------------------- */
+
+.index-dialog__sfx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: clamp(18px, 2.4vw, 30px);
+  border-top: 1px solid rgba(0, 0, 0, 0.28);
+  padding-top: 12px;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sfx-toggle {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.sfx-toggle[aria-pressed="false"] {
+  background: transparent;
+  color: var(--black);
+}
+
+.sfx-toggle:hover,
+.sfx-toggle:focus-visible {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+
+.relic__figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: url("assets/textures/halftone.png") center / 5px repeat;
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+@keyframes dialogPaperIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes stampIn {
+  0% { opacity: 0; transform: rotate(-14deg) scale(1.45); }
+  60% { opacity: 1; transform: rotate(-6deg) scale(0.97); }
+  100% { opacity: 1; transform: rotate(-7deg) scale(1); }
+}
+
+@keyframes pinPulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.94); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes routeWipe {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.plate-dialog[open],
+.relic-dialog[open],
+.index-dialog[open] {
+  animation: dialogPaperIn 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.plate-dialog[open]::backdrop,
+.relic-dialog[open]::backdrop,
+.index-dialog[open]::backdrop {
+  animation: backdropIn 0.28s ease both;
+}
+
+.map-pin.is-active::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pinPulse 2.5s ease-in-out infinite;
+}
+
+.map-room.is-blue .map-room__blue-line {
+  animation: routeWipe 1.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plate-dialog[open],
+  .relic-dialog[open],
+  .index-dialog[open],
+  .plate-dialog[open]::backdrop,
+  .relic-dialog[open]::backdrop,
+  .index-dialog[open]::backdrop,
+  .errata__stamp,
+  .map-pin.is-active::after,
+  .map-room.is-blue .map-room__blue-line {
+    animation: none;
   }
 }

@@ -135,6 +135,7 @@
 
   function openIndex(trigger) {
     if (!indexDialog || indexDialog.open) return;
+    playSfx("paper");
     lastIndexTrigger = trigger || null;
     restoreIndexFocus = true;
 
@@ -327,13 +328,13 @@
       title: "THE HAND",
       meta: "INK STUDY / MMXXVI",
       img: "assets/svg/plate-hand.svg",
-      alt: "A rough black ink hand with an eye in the palm and red annotation circles.",
+      alt: "A black handprint with a red registration target and pale finger lines.",
       w: 600,
       h: 760,
       text:
-        "A hand drawn from memory after the original was removed from the file. The eye in the palm is not part of the anatomy. It was added later, by someone who wanted to be watched.",
+        "A hand pressed into the page after the original was removed from the file. The registration target is not part of the anatomy. It was added later, by someone who wanted the print to be watched.",
       source:
-        "Original ink illustration made for this publication. No external source."
+        "Original print illustration made for this publication. No external source."
     },
     wheel: {
       no: "PLATE 09",
@@ -366,7 +367,7 @@
       title: "THE ERRATA",
       meta: "WRONG INK / MMXXVI",
       img: "assets/svg/plate-errata.svg",
-      alt: "A bright yellow errata plate with a rough black hand, an eye, blue scribbles and red registration marks.",
+      alt: "A bright yellow errata plate with a black handprint, blue offset, registration target and colour bars.",
       w: 600,
       h: 760,
       text:
@@ -414,6 +415,7 @@
     const index = plateOrder.indexOf(key);
     if (index < 0) return;
 
+    playSfx("static");
     lastPlateTrigger = trigger || null;
     renderPlate(index);
 
@@ -1777,6 +1779,7 @@
     const index = relicOrder.indexOf(key);
     if (index < 0) return;
 
+    playSfx("static");
     lastRelicTrigger = trigger || null;
     renderRelic(index);
 
@@ -1911,12 +1914,14 @@
   mapPins.forEach(function (button) {
     button.addEventListener("click", function () {
       renderMap(mapOrder.indexOf(button.getAttribute("data-map")));
+      playSfx("ping");
     });
   });
 
   if (mapTrace) {
     mapTrace.addEventListener("click", function () {
       renderMap((currentMapIndex + 1) % mapOrder.length);
+      playSfx("ping");
     });
   }
 
@@ -1948,6 +1953,7 @@
   if (blueRouteToggle) {
     blueRouteToggle.addEventListener("click", function () {
       setBlueRoute(!mapRoom.classList.contains("is-blue"));
+      playSfx("draw");
     });
   }
 
@@ -1985,6 +1991,37 @@
   ];
 
   let cutupMoves = 0;
+  let cutupTimer = null;
+
+  function typeCutup(text) {
+    if (!cutupOut) return;
+
+    if (cutupTimer) {
+      window.clearInterval(cutupTimer);
+      cutupTimer = null;
+    }
+
+    if (reducedMotion) {
+      cutupOut.textContent = text;
+      cutupOut.setAttribute("aria-live", "polite");
+      return;
+    }
+
+    cutupOut.setAttribute("aria-live", "off");
+    cutupOut.textContent = "";
+    let index = 0;
+
+    cutupTimer = window.setInterval(function () {
+      index += 1;
+      cutupOut.textContent = text.slice(0, index);
+
+      if (index >= text.length) {
+        window.clearInterval(cutupTimer);
+        cutupTimer = null;
+        cutupOut.setAttribute("aria-live", "polite");
+      }
+    }, 17);
+  }
 
   function makeCutup() {
     if (!cutupOut || !cutupBtn) return;
@@ -1992,17 +2029,20 @@
     const opener = cutupOpeners[randomInt(0, cutupOpeners.length - 1)];
     const middle = cutupMiddles[randomInt(0, cutupMiddles.length - 1)];
     const ending = cutupEndings[randomInt(0, cutupEndings.length - 1)];
+    let text = opener + " " + middle + " " + ending;
 
     cutupMoves += 1;
-    cutupOut.textContent = opener + " " + middle + " " + ending;
 
     if (cutupCount) cutupCount.textContent = "CUT " + pad(cutupMoves, 3);
 
     if (cutupMoves === 3) {
-      cutupOut.textContent += " The blade is warm.";
+      text += " The blade is warm.";
     } else if (cutupMoves === 7) {
-      cutupOut.textContent += " Stop cutting. It is already a sentence.";
+      text += " Stop cutting. It is already a sentence.";
     }
+
+    playSfx("stamp");
+    typeCutup(text);
   }
 
   if (cutupBtn) {
@@ -2187,7 +2227,170 @@
       event.preventDefault();
       toggleRoomTone();
     }
+
+    if (
+      event.key.toLowerCase() === "f" &&
+      !editing &&
+      !hasModifier
+    ) {
+      event.preventDefault();
+      toggleSfx();
+    }
   });
+
+  /* ------------------------------------------------------------------------
+     Interface sounds
+     ------------------------------------------------------------------------ */
+
+  const sfxToggle = $("#sfxToggle");
+  const sfx = {
+    ctx: null,
+    noise: null
+  };
+  let sfxEnabled = true;
+
+  function ensureSfxContext() {
+    if (!AudioContextClass) return null;
+    if (!sfx.ctx) {
+      sfx.ctx = new AudioContextClass();
+    }
+    if (sfx.ctx.state === "suspended") {
+      sfx.ctx.resume();
+    }
+    return sfx.ctx;
+  }
+
+  function getSfxNoise(ctx) {
+    if (sfx.noise) return sfx.noise;
+
+    const length = Math.floor(ctx.sampleRate * 1.2);
+    const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    let last = 0;
+
+    for (let i = 0; i < length; i += 1) {
+      const white = Math.random() * 2 - 1;
+      last = (last + 0.02 * white) / 1.02;
+      data[i] = last * 4;
+    }
+
+    sfx.noise = buffer;
+    return buffer;
+  }
+
+  function sfxGain(ctx, peak, duration) {
+    const now = ctx.currentTime;
+    const gain = ctx.createGain();
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(peak, now + 0.008);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+    gain.connect(ctx.destination);
+    return { gain: gain, start: now, end: now + duration + 0.03 };
+  }
+
+  function playSfx(kind) {
+    if (!sfxEnabled) return;
+    const ctx = ensureSfxContext();
+    if (!ctx) return;
+
+    if (kind === "paper") {
+      const source = ctx.createBufferSource();
+      source.buffer = getSfxNoise(ctx);
+      const filter = ctx.createBiquadFilter();
+      filter.type = "highpass";
+      filter.frequency.value = 900;
+      const envelope = sfxGain(ctx, 0.045, 0.11);
+      source.connect(filter);
+      filter.connect(envelope.gain);
+      source.start(envelope.start);
+      source.stop(envelope.end);
+    } else if (kind === "static") {
+      const source = ctx.createBufferSource();
+      source.buffer = getSfxNoise(ctx);
+      const filter = ctx.createBiquadFilter();
+      filter.type = "bandpass";
+      filter.frequency.value = 1100;
+      filter.Q.value = 0.7;
+      const envelope = sfxGain(ctx, 0.035, 0.19);
+      source.connect(filter);
+      filter.connect(envelope.gain);
+      source.start(envelope.start);
+      source.stop(envelope.end);
+    } else if (kind === "ping") {
+      const envelope = sfxGain(ctx, 0.035, 0.2);
+      [880, 1320].forEach(function (frequency, index) {
+        const oscillator = ctx.createOscillator();
+        oscillator.type = "sine";
+        oscillator.frequency.value = frequency;
+        const gain = ctx.createGain();
+        gain.gain.value = index === 0 ? 0.55 : 0.2;
+        oscillator.connect(gain);
+        gain.connect(envelope.gain);
+        oscillator.start(envelope.start);
+        oscillator.stop(envelope.end);
+      });
+    } else if (kind === "stamp") {
+      const envelope = sfxGain(ctx, 0.07, 0.17);
+      const oscillator = ctx.createOscillator();
+      oscillator.type = "sine";
+      oscillator.frequency.setValueAtTime(92, envelope.start);
+      oscillator.frequency.exponentialRampToValueAtTime(54, envelope.start + 0.12);
+      oscillator.connect(envelope.gain);
+      oscillator.start(envelope.start);
+      oscillator.stop(envelope.end);
+
+      const source = ctx.createBufferSource();
+      source.buffer = getSfxNoise(ctx);
+      const filter = ctx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.value = 600;
+      source.connect(filter);
+      filter.connect(envelope.gain);
+      source.start(envelope.start);
+      source.stop(envelope.end);
+    } else if (kind === "draw") {
+      const source = ctx.createBufferSource();
+      source.buffer = getSfxNoise(ctx);
+      const filter = ctx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.setValueAtTime(1600, ctx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(280, ctx.currentTime + 0.34);
+      const envelope = sfxGain(ctx, 0.03, 0.36);
+      source.connect(filter);
+      filter.connect(envelope.gain);
+      source.start(envelope.start);
+      source.stop(envelope.end);
+    }
+  }
+
+  function updateSfxUI() {
+    if (!sfxToggle) return;
+    sfxToggle.setAttribute("aria-pressed", String(sfxEnabled));
+    sfxToggle.textContent = sfxEnabled ? "SOUND FX: ON" : "SOUND FX: OFF";
+  }
+
+  function toggleSfx() {
+    if (!AudioContextClass) return;
+    sfxEnabled = !sfxEnabled;
+    updateSfxUI();
+    if (sfxEnabled) {
+      playSfx("ping");
+      if (typeof toast === "function") toast("INTERFACE SOUNDS ON.");
+    } else if (typeof toast === "function") {
+      toast("INTERFACE SOUNDS OFF.");
+    }
+  }
+
+  if (sfxToggle) {
+    if (!AudioContextClass) {
+      sfxEnabled = false;
+      sfxToggle.disabled = true;
+      sfxToggle.textContent = "SOUND FX: UNAVAILABLE";
+    } else {
+      sfxToggle.addEventListener("click", toggleSfx);
+    }
+    updateSfxUI();
+  }
 
   /* ------------------------------------------------------------------------
      Initial state
