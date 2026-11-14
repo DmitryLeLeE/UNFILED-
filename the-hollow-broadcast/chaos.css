@@ -4619,6 +4619,31 @@ body {
   border-color: var(--red);
 }
 
+.map-room__full {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  color: var(--black);
+  font-family: var(--mono);
+  font-size: 6px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 3px;
+}
+
+.map-room__full span {
+  color: var(--red);
+  font-size: 11px;
+}
+
+.map-room__full:hover,
+.map-room__full:focus-visible {
+  color: var(--red);
+}
+
 .map-room__legend {
   margin: 20px 0 0;
   padding-top: 9px;
