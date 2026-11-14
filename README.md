@@ -269,10 +269,11 @@ The paper, xerox, ink, tape, torn-edge and hand-drawn assets are original to thi
 project. Fonts are distributed under the SIL Open Font License; licence files are
 in `the-hollow-broadcast/assets/fonts/licenses/`.
 
-The nine relic drawings, the signal map, the errata plate and the blue-route
-print are original. Their cultural references are textual allusions only; no
-copyrighted characters, logos, footage or original artwork were used. The
-referenced works remain the property of their makers.
+The nine relic plates recompose public-domain and CC0 fragments from the
+plates section. The signal map, errata plate and cyanotype blue-route proof are
+original. Their cultural references are textual allusions only; no copyrighted
+characters, logos, footage or original artwork were used. The referenced works
+remain the property of their makers.
 
 The Vesalius skeleton in Appendix C is from Wellcome Collection and is used
 under CC BY 4.0; the credit is printed in the section, the colophon and

@@ -64,8 +64,8 @@ The following are original to this project and are not derived from the sources 
 - The physical material layer: torn-paper section and image masks, torn edges, tape, paper scraps, xerox/toner/paper textures, halftone, ink dropout, scratches, and hand-drawn red/black marks in `assets/paper/`, `assets/textures/`, `assets/illustrations/`, and `assets/overlays/`.
 - `assets/svg/contour.svg`, `assets/svg/ribbons.svg`, and `assets/grain.png`.
 - The four original ink plates: `assets/svg/plate-hand.svg`, `assets/svg/plate-wheel.svg`, `assets/svg/plate-spiral.svg`, and the yellow `assets/svg/plate-errata.svg`.
-- The nine original relic drawings: `assets/svg/relic-capsule.svg`, `relic-cake.svg`, `relic-monolith.svg`, `relic-balloon.svg`, `relic-rabbit.svg`, `relic-channel.svg`, `relic-redroom.svg`, `relic-vhs.svg`, and `relic-mirror.svg`.
-- The original signal map: `assets/svg/signal-map.svg`, the six fictional field notes in `script.js`, and the unauthorised `assets/svg/blue-route.svg` print.
+- The nine relic plates are compositions of the public-domain / CC0 plates already listed above; no new source imagery was added.
+- The original signal map: `assets/svg/signal-map.svg`, the six fictional field notes in `script.js`, and the unauthorised `assets/img/blue-route-print.webp` cyanotype proof.
 - The Text Cut-Up tool in Fragments.
 - The audio synthesis, the receiver interaction, the synthesized room tone, and the interface sound engine.
 
@@ -83,7 +83,7 @@ Appendix A contains nine textual allusions to widely circulated works:
 - *Ringu* (1998) — the VHS tape.
 - *Black Mirror* (2011) — the black mirror.
 
-The allusions are textual only. No characters, logos, footage, or original artwork from those works are reproduced. The nine relic drawings and the signal map are original to this project. The works themselves remain the property of their makers.
+The allusions are textual only. No characters, logos, footage, or original artwork from those works are reproduced. The relic plate compositions, signal map, errata plate and blue-route proof are original to this project. The works themselves remain the property of their makers.
 
 ## Fonts
 

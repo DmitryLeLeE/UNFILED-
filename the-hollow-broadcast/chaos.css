@@ -3966,7 +3966,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: contrast(1.06);
+  filter: grayscale(1) contrast(1.18);
   transition: filter 0.25s ease, transform 0.25s ease;
 }
 
@@ -4098,6 +4098,7 @@ body {
   width: 100%;
   max-height: 62vh;
   object-fit: contain;
+  filter: grayscale(1) contrast(1.08);
 }
 
 .relic-dialog__body {
@@ -5213,6 +5214,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  filter: contrast(1.28) brightness(1.08) saturate(1.05);
 }
 
 @media (max-width: 900px) {
@@ -6007,5 +6009,95 @@ html.motion-lite { scroll-behavior: auto; }
   .ossuary__figure img,
   .lost-reel.is-playing .film-frame.is-active img {
     animation: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Final art pass: printed instructions, fax perforations and legible microtype
+   -------------------------------------------------------------------------- */
+
+.apparatus__controls {
+  padding: clamp(15px, 1.8vw, 26px);
+  border: 1px solid var(--black);
+  background: #f3eee0 url("assets/textures/paper-fiber.webp");
+  background-size: 330px 330px;
+  box-shadow: 8px 8px 0 var(--red);
+}
+
+.apparatus__controls::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 18%;
+  z-index: 4;
+  width: 92px;
+  height: 23px;
+  background: url("assets/paper/tape-01.svg") center / 100% 100% no-repeat;
+  opacity: 0.82;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.transmission-machine__paper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  z-index: 2;
+  width: 9px;
+  background-image: radial-gradient(circle at 4px 9px, transparent 0 3px, rgba(0, 0, 0, 0.28) 3.2px 4px, transparent 4.2px);
+  background-size: 9px 22px;
+  background-repeat: repeat-y;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media (min-width: 761px) {
+  .micro-label,
+  .plate__meta,
+  .relic__no,
+  .relic__ref,
+  .map-room__legend,
+  .map-room__meta,
+  .lost-reel__status,
+  .lost-reel__meta,
+  .film-frame figcaption,
+  .ossuary__credit,
+  .relics__notice,
+  .map-room__notice,
+  .last-things__notice,
+  .transmission-machine__meta,
+  .transmission-log__note,
+  .cutup__note,
+  .errata__stamp {
+    font-size: 6.5px;
+  }
+}
+
+@media (max-width: 760px) {
+  .apparatus__controls {
+    padding: 14px;
+    box-shadow: 5px 5px 0 var(--red);
+  }
+
+  .micro-label,
+  .plate__meta,
+  .relic__no,
+  .relic__ref,
+  .map-room__legend,
+  .map-room__meta,
+  .lost-reel__status,
+  .lost-reel__meta,
+  .film-frame figcaption,
+  .ossuary__credit,
+  .relics__notice,
+  .map-room__notice,
+  .last-things__notice,
+  .transmission-machine__meta,
+  .transmission-log__note,
+  .cutup__note,
+  .errata__stamp {
+    font-size: 6px;
   }
 }

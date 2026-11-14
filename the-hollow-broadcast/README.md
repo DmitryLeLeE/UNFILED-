@@ -24,7 +24,7 @@ Built as a static site for GitHub Pages. No build step. No framework. No backend
 - **Fragments** — black-page notes, red corrections, and an anatomical eye diagram pressed into the background.
 - **Apparatus** — an interactive sigil engine. Generate marks, read the designation, save the result as an SVG.
 - **Frequencies** — four synthesized drone channels built with Web Audio. No mp3 files, no streaming service, no end of track.
-- **Cultural Residue** — Appendix A: nine original relic drawings that allude to shared pop-culture objects from the 1980s–2010s without using their original imagery. Click a relic to open its file card.
+- **Cultural Residue** — Appendix A: nine relic plates composed from public-domain/CC0 archive fragments, alluding to shared pop-culture objects from the 1980s–2010s without using their original imagery. Click a relic to open its file card.
 - **The Map Room** — Appendix B: an original signal map with six interactive field notes, a red route, one incorrect north, and a blue ink-test route that is not in the legend.
 - **Last Things** — Appendix C: a 1543 Vesalius skeleton (Wellcome Collection, CC BY 4.0), an ossuary index, and a 35mm lost-reel player with six frames and two missing frames.
 - **Room Tone** — a low, synthesized background hum controlled by the fixed `ROOM TONE [S]` toggle. It starts on click, never autoplays, and can be stopped at any time.
@@ -100,11 +100,11 @@ A local server is better than opening `index.html` directly, especially for the 
 | Cutting-table piece positions | `index.html` — each `.scrap` has `data-x`, `data-y`, `data-rot`, `data-w`, plus matching inline custom properties |
 | Audio channel names, descriptions, tuning | `script.js` — the `channels` array |
 | Relic names, references, descriptions | `script.js` — the `relics` object |
-| Relic illustrations | `assets/svg/relic-*.svg` |
+| Relic plates | `assets/img/` archive fragments, composed in `index.html` / `script.js` |
 | Map locations and field notes | `script.js` — the `mapNodes` object |
 | Signal map | `assets/svg/signal-map.svg` |
 | Errata plate | `assets/svg/plate-errata.svg` |
-| Blue-route print | `assets/svg/blue-route.svg` |
+| Blue-route print | `assets/img/blue-route-print.webp` |
 | Ossuary skeleton | `assets/img/ossuary-skeleton.webp` — Wellcome Collection, CC BY 4.0 |
 | Lost-reel frames | `assets/img/ossuary-*.jpg` + CSS film strip |
 | Random transmission messages | `script.js` — the `transmissionMessages` array |
@@ -149,7 +149,7 @@ See [SOURCES.md](SOURCES.md) for the exact source pages, creators, and licences.
 
 Fonts are distributed under the SIL Open Font License; the licence files are in `assets/fonts/licenses/`.
 
-The nine relic drawings, the signal map, the errata plate and the blue-route print are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
+The nine relic plates recompose public-domain and CC0 source photographs from the plates section. The signal map, errata plate and blue-route print are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
 
 The Vesalius skeleton in Appendix C is from Wellcome Collection (CC BY 4.0) and is credited in the section, colophon and SOURCES.md.
 
