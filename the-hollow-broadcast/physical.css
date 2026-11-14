@@ -667,3 +667,38 @@
     height: 66px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Appendix A / residue cards
+   -------------------------------------------------------------------------- */
+
+.relics {
+  -webkit-mask-image: url("assets/paper/torn-section-flat-03.svg");
+  mask-image: url("assets/paper/torn-section-flat-03.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.relic--capsule .relic__figure,
+.relic--balloon .relic__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-01.svg");
+  mask-image: url("assets/paper/torn-mask-01.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.relic--cake .relic__figure,
+.relic--rabbit .relic__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-02.svg");
+  mask-image: url("assets/paper/torn-mask-02.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.relic--monolith .relic__figure,
+.relic--channel .relic__figure {
+  -webkit-mask-image: url("assets/paper/torn-mask-03.svg");
+  mask-image: url("assets/paper/torn-mask-03.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}

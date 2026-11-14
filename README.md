@@ -81,6 +81,11 @@ sent anywhere. Nothing survives after the window closes.
 Six real doorways out of this building. They are not affiliated with the
 broadcast. The internet is still a place you can get lost in.
 
+### A / CULTURAL RESIDUE
+An appendix of six objects borrowed from the world's shared memory, stripped of
+their original images and filed under residue. The references are textual; the
+drawings are original. The stories are still missing their endings.
+
 ### 08 / COLOPHON
 Plates, type, machine notes and the end of the transmission.
 
@@ -97,6 +102,8 @@ There is no correct order, but there is an index.
   With a scrap focused, arrow keys nudge it, `[` and `]` rotate it, and `Shift` makes nudges larger.
 - Press **DRAW A MARK** in Apparatus to generate a new sigil, then **SAVE SVG** if you want to keep it.
 - Select a frequency and press play. Sound is generated live in the browser.
+- Press **ROOM TONE [S]** at the lower left for a low, synthesized room hum. It starts only on click and can be stopped at any time.
+- Open **CULTURAL RESIDUE** from the index or scroll to the appendix. Click a relic to open its file; use previous/next inside.
 - Press **RECEIVE TRANSMISSION** in Transmissions. Do not reply.
 - Touch the moth three times. It is not a button.
 
@@ -161,6 +168,15 @@ A new instrument in **Fragments**. Every press of **CUT THE TEXT** reassembles a
 sentence from local fragments. After the third cut it starts talking back. The
 tool is local only: no saving, no sending, no account.
 
+### APPENDIX A / CULTURAL RESIDUE
+
+![Appendix A — Cultural Residue](previews/09-cultural-residue.jpg)
+
+Six relics, six references, one filing error. The appendix is part of the
+publication, not a bonus page.
+
+![The relic reader](previews/10-relic-reader.jpg)
+
 ### SOCIAL CARD / 1200 × 630
 
 ![The Hollow Broadcast — social card](previews/social-card.jpg)
@@ -175,7 +191,9 @@ image is also published as [`assets/og-cover.jpg`](the-hollow-broadcast/assets/o
 Static HTML, CSS and vanilla JavaScript. No build step. No framework. No backend.
 No analytics. No cookies. No master.
 
-The only thing stored locally is the audio volume. Nothing is sent anywhere.
+The only thing stored locally is the audio volume. The room tone and the four
+carriers are synthesized live in the browser; there are no audio files, no
+streaming service and no autoplay. Nothing is sent anywhere.
 
 The source starts at [`the-hollow-broadcast/index.html`](the-hollow-broadcast/index.html).
 The publication is deployed by the GitHub Pages workflow in
@@ -204,6 +222,10 @@ for this publication. Exact source pages, makers and licences are in
 The paper, xerox, ink, tape, torn-edge and hand-drawn assets are original to this
 project. Fonts are distributed under the SIL Open Font License; licence files are
 in `the-hollow-broadcast/assets/fonts/licenses/`.
+
+The six relic drawings are original. Their cultural references are textual
+allusions only; no copyrighted characters, logos, footage or original artwork
+were used. The referenced works remain the property of their makers.
 
 The writing, layout and code are released without restriction:
 

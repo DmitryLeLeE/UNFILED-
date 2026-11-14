@@ -24,6 +24,8 @@ Built as a static site for GitHub Pages. No build step. No framework. No backend
 - **Fragments** — black-page notes, red corrections, and an anatomical eye diagram pressed into the background.
 - **Apparatus** — an interactive sigil engine. Generate marks, read the designation, save the result as an SVG.
 - **Frequencies** — four synthesized drone channels built with Web Audio. No mp3 files, no streaming service, no end of track.
+- **Cultural Residue** — Appendix A: six original relic drawings that allude to shared pop-culture objects without using their original imagery. Click a relic to open its file card.
+- **Room Tone** — a low, synthesized background hum controlled by the fixed `ROOM TONE [S]` toggle. It starts on click, never autoplays, and can be stopped at any time.
 - **Transmissions** — a local random message receiver with a scrambled type-in effect and a three-entry log.
 - **Other Worlds** — six real external archives and libraries, presented without an algorithm.
 - **Colophon** — sources, type, production notes, and the end of the transmission.
@@ -95,6 +97,8 @@ A local server is better than opening `index.html` directly, especially for the 
 | Specimen metadata and long descriptions | `script.js` — the `plates` object |
 | Cutting-table piece positions | `index.html` — each `.scrap` has `data-x`, `data-y`, `data-rot`, `data-w`, plus matching inline custom properties |
 | Audio channel names, descriptions, tuning | `script.js` — the `channels` array |
+| Relic names, references, descriptions | `script.js` — the `relics` object |
+| Relic illustrations | `assets/svg/relic-*.svg` |
 | Random transmission messages | `script.js` — the `transmissionMessages` array |
 | Sigil words and instructions | `script.js` — the `sigilSubjects`, `sigilVerbs`, `sigilObjects`, and `sigilInstructions` arrays |
 | Images | `assets/img/` |
@@ -120,6 +124,8 @@ All are self-hosted in WOFF2 format with broad fallbacks in the CSS. If external
 - In **The Cutting Table**, drag any scrap with a mouse or a finger. Use **SHUFFLE THE TABLE** for a new arrangement, **TURN 15°** to rotate the selected scrap, and **RESET** to return to the printed state. With a scrap focused, arrow keys nudge it, `[` and `]` rotate it, and Shift makes nudges larger.
 - In **Apparatus**, use **DRAW A MARK** to generate a new sigil, and **SAVE SVG** to download it.
 - In **Frequencies**, select a channel, press play, and adjust volume. When you scroll away from the section, a small fixed frequency flag appears so you can stop the sound.
+- Press **ROOM TONE [S]** for a low synthesized room hum. It is generated in the browser, starts only on user action, and stops with a second press.
+- Open **CULTURAL RESIDUE** (Appendix A) and click any relic to open its reader; use previous/next inside the dialog.
 - In **Transmissions**, press **RECEIVE TRANSMISSION** to generate a new message.
 - Three touches on the moth produce a small, unnecessary event.
 - The audio volume is remembered in `localStorage`. Nothing else is stored, and nothing is sent anywhere.
@@ -131,6 +137,8 @@ All sourced photographic and illustrative plates are public-domain or CC0 materi
 See [SOURCES.md](SOURCES.md) for the exact source pages, creators, and licences.
 
 Fonts are distributed under the SIL Open Font License; the licence files are in `assets/fonts/licenses/`.
+
+The six relic drawings are original. Their pop-culture references are textual allusions only; no copyrighted characters, logos, footage, or original artwork are used. The referenced works remain the property of their makers.
 
 The original writing, layout, code, and generated sigils are released without restriction: **NO RIGHTS RESERVED / NO RIGHTS OBSERVED.**
 

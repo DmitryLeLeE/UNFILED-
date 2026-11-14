@@ -115,10 +115,13 @@
 
   const indexDialog = $("#indexDialog");
   const plateDialog = $("#plateDialog");
+  const relicDialog = $("#relicDialog");
 
   function syncModalState() {
     const open = Boolean(
-      (indexDialog && indexDialog.open) || (plateDialog && plateDialog.open)
+      (indexDialog && indexDialog.open) ||
+        (plateDialog && plateDialog.open) ||
+        (relicDialog && relicDialog.open)
     );
     body.classList.toggle("modal-open", open);
   }
@@ -211,7 +214,8 @@
       event.key.toLowerCase() === "i" &&
       !editing &&
       !hasModifier &&
-      !(plateDialog && plateDialog.open)
+      !(plateDialog && plateDialog.open) &&
+      !(relicDialog && relicDialog.open)
     ) {
       event.preventDefault();
       if (indexDialog && indexDialog.open) {
@@ -1639,6 +1643,155 @@
   }
 
   /* ------------------------------------------------------------------------
+     Appendix A / residue reader
+     ------------------------------------------------------------------------ */
+
+  const relics = {
+    capsule: {
+      no: "REL. 01 / THE UNLABELED CAPSULE",
+      title: "THE UNLABELED CAPSULE",
+      ref: "RESIDUE OF: THE MATRIX (1999)",
+      img: "assets/svg/relic-capsule.svg",
+      alt: "A red capsule with no label, drawn as a rough ink diagram.",
+      text:
+        "A red object with no instructions. The choice was never between two objects; it was between two versions of the room. We kept the capsule. The room stayed."
+    },
+    cake: {
+      no: "REL. 02 / THE CAKE (A LIE)",
+      title: "THE CAKE (A LIE)",
+      ref: "RESIDUE OF: PORTAL (2007)",
+      img: "assets/svg/relic-cake.svg",
+      alt: "A black triangular cake with a red candle, drawn as a rough ink diagram.",
+      text:
+        "The cake was promised. The cake was not delivered. The recipe survived, but every ingredient has been replaced by a recorded voice."
+    },
+    monolith: {
+      no: "REL. 03 / THE MONOLITH (CHIPPED)",
+      title: "THE MONOLITH (CHIPPED)",
+      ref: "RESIDUE OF: 2001: A SPACE ODYSSEY (1968)",
+      img: "assets/svg/relic-monolith.svg",
+      alt: "A black monolith in front of a red sun, drawn as a rough ink diagram.",
+      text:
+        "It was already there when the room arrived. We built the wall around it and called the wall history."
+    },
+    balloon: {
+      no: "REL. 04 / THE RED BALLOON",
+      title: "THE RED BALLOON",
+      ref: "RESIDUE OF: IT (1986 / 2017)",
+      img: "assets/svg/relic-balloon.svg",
+      alt: "A red balloon above a black storm drain, drawn as a rough ink diagram.",
+      text:
+        "It came up through the storm drain. The drain was not connected to anything. The balloon was."
+    },
+    rabbit: {
+      no: "REL. 05 / THE WHITE RABBIT",
+      title: "THE WHITE RABBIT",
+      ref: "RESIDUE OF: ALICE IN WONDERLAND (1865)",
+      img: "assets/svg/relic-rabbit.svg",
+      alt: "A black rabbit silhouette with a red watch, drawn as a rough ink diagram.",
+      text:
+        "The rabbit is late. The watch is wrong. The hole is exactly where you are standing."
+    },
+    channel: {
+      no: "REL. 06 / THE DEAD CHANNEL",
+      title: "THE DEAD CHANNEL",
+      ref: "RESIDUE OF: NEUROMANCER (1984)",
+      img: "assets/svg/relic-channel.svg",
+      alt: "A black television screen full of static and an eye, with a red channel marker.",
+      text:
+        "The sky was the colour of a dead channel. We kept watching. Somewhere behind the static, a weather report was still being written."
+    }
+  };
+
+  const relicOrder = ["capsule", "cake", "monolith", "balloon", "rabbit", "channel"];
+  let currentRelicIndex = 0;
+  let lastRelicTrigger = null;
+
+  const relicDialogImage = $("#relicDialogImage");
+  const relicDialogNo = $("#relicDialogNo");
+  const relicDialogRef = $("#relicDialogRef");
+  const relicDialogTitle = $("#relicDialogTitle");
+  const relicDialogText = $("#relicDialogText");
+  const relicClose = $("#relicClose");
+  const relicPrev = $("#relicPrev");
+  const relicNext = $("#relicNext");
+
+  function renderRelic(index) {
+    const data = relics[relicOrder[index]];
+    if (!data) return;
+
+    currentRelicIndex = index;
+
+    if (relicDialogImage) {
+      relicDialogImage.src = data.img;
+      relicDialogImage.alt = data.alt;
+    }
+    if (relicDialogNo) relicDialogNo.textContent = "APPENDIX A / " + data.no;
+    if (relicDialogRef) relicDialogRef.textContent = data.ref;
+    if (relicDialogTitle) relicDialogTitle.textContent = data.title;
+    if (relicDialogText) relicDialogText.textContent = data.text;
+  }
+
+  function openRelic(key, trigger) {
+    if (!relicDialog || relicDialog.open) return;
+    const index = relicOrder.indexOf(key);
+    if (index < 0) return;
+
+    lastRelicTrigger = trigger || null;
+    renderRelic(index);
+
+    if (typeof relicDialog.showModal === "function") {
+      relicDialog.showModal();
+    } else {
+      relicDialog.setAttribute("open", "");
+    }
+
+    syncModalState();
+  }
+
+  function closeRelic() {
+    if (!relicDialog) return;
+    if (typeof relicDialog.close === "function") {
+      relicDialog.close();
+    } else {
+      relicDialog.removeAttribute("open");
+      if (lastRelicTrigger) lastRelicTrigger.focus();
+    }
+    syncModalState();
+  }
+
+  $$("[data-relic]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      openRelic(button.getAttribute("data-relic"), button);
+    });
+  });
+
+  if (relicClose) relicClose.addEventListener("click", closeRelic);
+
+  if (relicPrev) {
+    relicPrev.addEventListener("click", function () {
+      renderRelic((currentRelicIndex - 1 + relicOrder.length) % relicOrder.length);
+    });
+  }
+
+  if (relicNext) {
+    relicNext.addEventListener("click", function () {
+      renderRelic((currentRelicIndex + 1) % relicOrder.length);
+    });
+  }
+
+  if (relicDialog) {
+    relicDialog.addEventListener("close", function () {
+      syncModalState();
+      if (lastRelicTrigger) lastRelicTrigger.focus();
+    });
+
+    relicDialog.addEventListener("click", function (event) {
+      if (event.target === relicDialog) closeRelic();
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      Text cut-up
      ------------------------------------------------------------------------ */
 
@@ -1695,6 +1848,186 @@
   if (cutupBtn) {
     cutupBtn.addEventListener("click", makeCutup);
   }
+
+  /* ------------------------------------------------------------------------
+     Room tone
+     ------------------------------------------------------------------------ */
+
+  const toneToggle = $("#toneToggle");
+  const toneLabel = toneToggle ? toneToggle.querySelector(".tone-toggle__label") : null;
+
+  const roomTone = {
+    ctx: null,
+    master: null,
+    nodes: [],
+    on: false,
+    timer: null
+  };
+
+  function updateToneUI() {
+    if (!toneToggle) return;
+    toneToggle.classList.toggle("is-on", roomTone.on);
+    toneToggle.setAttribute("aria-pressed", String(roomTone.on));
+    toneToggle.setAttribute(
+      "aria-label",
+      roomTone.on ? "Turn room tone off" : "Turn room tone on"
+    );
+    if (toneLabel) toneLabel.textContent = roomTone.on ? "ROOM TONE ON" : "ROOM TONE";
+  }
+
+  function createRoomTone() {
+    if (!AudioContextClass) return false;
+    if (roomTone.ctx) return true;
+
+    const ctx = new AudioContextClass();
+    const master = ctx.createGain();
+    const compressor = ctx.createDynamicsCompressor();
+
+    master.gain.value = 0;
+    compressor.threshold.value = -24;
+    compressor.knee.value = 18;
+    compressor.ratio.value = 5;
+    compressor.attack.value = 0.02;
+    compressor.release.value = 0.4;
+
+    master.connect(compressor);
+    compressor.connect(ctx.destination);
+
+    const oscillatorA = ctx.createOscillator();
+    const oscillatorB = ctx.createOscillator();
+    oscillatorA.type = "sine";
+    oscillatorA.frequency.value = 55;
+    oscillatorB.type = "triangle";
+    oscillatorB.frequency.value = 61.7;
+
+    const gainA = ctx.createGain();
+    const gainB = ctx.createGain();
+    gainA.gain.value = 0.045;
+    gainB.gain.value = 0.018;
+
+    oscillatorA.connect(gainA);
+    oscillatorB.connect(gainB);
+    gainA.connect(master);
+    gainB.connect(master);
+
+    const length = Math.floor(ctx.sampleRate * 3);
+    const buffer = ctx.createBuffer(1, length, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    let last = 0;
+
+    for (let i = 0; i < length; i += 1) {
+      const white = Math.random() * 2 - 1;
+      last = (last + 0.018 * white) / 1.018;
+      data[i] = last * 2.8;
+    }
+
+    const noise = ctx.createBufferSource();
+    noise.buffer = buffer;
+    noise.loop = true;
+
+    const noiseFilter = ctx.createBiquadFilter();
+    noiseFilter.type = "lowpass";
+    noiseFilter.frequency.value = 240;
+    noiseFilter.Q.value = 0.6;
+
+    const noiseGain = ctx.createGain();
+    noiseGain.gain.value = 0.028;
+
+    noise.connect(noiseFilter);
+    noiseFilter.connect(noiseGain);
+    noiseGain.connect(master);
+
+    oscillatorA.start();
+    oscillatorB.start();
+    noise.start();
+
+    roomTone.ctx = ctx;
+    roomTone.master = master;
+    roomTone.nodes = [oscillatorA, oscillatorB, noise, gainA, gainB, noiseFilter, noiseGain, compressor];
+
+    return true;
+  }
+
+  function startRoomTone() {
+    if (!createRoomTone() || !roomTone.ctx || !roomTone.master) return;
+
+    if (roomTone.timer) {
+      window.clearTimeout(roomTone.timer);
+      roomTone.timer = null;
+    }
+
+    const ctx = roomTone.ctx;
+    if (ctx.state === "suspended") ctx.resume();
+
+    const now = ctx.currentTime;
+    roomTone.master.gain.cancelScheduledValues(now);
+    roomTone.master.gain.setValueAtTime(Math.max(0.0001, roomTone.master.gain.value), now);
+    roomTone.master.gain.linearRampToValueAtTime(0.72, now + 1.4);
+
+    roomTone.on = true;
+    updateToneUI();
+  }
+
+  function stopRoomTone() {
+    if (!roomTone.ctx || !roomTone.master) {
+      roomTone.on = false;
+      updateToneUI();
+      return;
+    }
+
+    const ctx = roomTone.ctx;
+    const now = ctx.currentTime;
+    roomTone.master.gain.cancelScheduledValues(now);
+    roomTone.master.gain.setValueAtTime(roomTone.master.gain.value, now);
+    roomTone.master.gain.linearRampToValueAtTime(0.0001, now + 0.55);
+
+    roomTone.on = false;
+    updateToneUI();
+
+    roomTone.timer = window.setTimeout(function () {
+      if (!roomTone.on && roomTone.ctx && roomTone.ctx.state === "running") {
+        roomTone.ctx.suspend();
+      }
+    }, 700);
+  }
+
+  function toggleRoomTone() {
+    if (roomTone.on) {
+      stopRoomTone();
+    } else {
+      startRoomTone();
+    }
+  }
+
+  if (toneToggle) {
+    if (!AudioContextClass) {
+      toneToggle.disabled = true;
+      toneToggle.setAttribute("aria-label", "Room tone unavailable in this browser");
+    } else {
+      toneToggle.addEventListener("click", toggleRoomTone);
+    }
+  }
+
+  document.addEventListener("keydown", function (event) {
+    const tag = document.activeElement ? document.activeElement.tagName : "";
+    const editing = /INPUT|TEXTAREA|SELECT/.test(tag);
+    const hasModifier = event.metaKey || event.ctrlKey || event.altKey;
+    const modalOpen = Boolean(
+      (indexDialog && indexDialog.open) ||
+        (plateDialog && plateDialog.open) ||
+        (relicDialog && relicDialog.open)
+    );
+
+    if (
+      event.key.toLowerCase() === "s" &&
+      !editing &&
+      !hasModifier &&
+      !modalOpen
+    ) {
+      event.preventDefault();
+      toggleRoomTone();
+    }
+  });
 
   /* ------------------------------------------------------------------------
      Initial state
