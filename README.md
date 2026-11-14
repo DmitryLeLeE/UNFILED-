@@ -126,6 +126,33 @@ notes are in [`the-hollow-broadcast/README.md`](the-hollow-broadcast/README.md).
 
 ---
 
+## THE OBJECT IN FRAMES
+
+![The Hollow Broadcast — contact sheet of all nine sections](previews/contact-sheet.jpg)
+
+A contact sheet from the rendered publication. The whole object, cut into nine frames.
+
+Individual frames:
+[00 Entrance](previews/00-entrance.jpg) ·
+[01 Specimens](previews/01-specimens.jpg) ·
+[02 Cutting Table](previews/02-cutting-table.jpg) ·
+[03 Fragments](previews/03-fragments.jpg) ·
+[04 Apparatus](previews/04-apparatus.jpg) ·
+[05 Frequencies](previews/05-frequencies.jpg) ·
+[06 Transmissions](previews/06-transmissions.jpg) ·
+[07 Other Worlds](previews/07-other-worlds.jpg) ·
+[08 Colophon](previews/08-colophon.jpg) ·
+[Mobile](previews/mobile.jpg)
+
+### SOCIAL CARD / 1200 × 630
+
+![The Hollow Broadcast — social card](previews/social-card.jpg)
+
+This is the Open Graph / Twitter card used when the publication is shared. The
+image is also published as [`assets/og-cover.jpg`](the-hollow-broadcast/assets/og-cover.jpg).
+
+---
+
 ## THE MACHINE
 
 Static HTML, CSS and vanilla JavaScript. No build step. No framework. No backend.
